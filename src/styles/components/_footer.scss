@@ -1,0 +1,31 @@
+/* Footer SCSS */
+main {
+  padding-bottom: 82px; //Footer height to prevent overlap.
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+
+  width: 100%;
+
+  background-color: $revive-light-blue;
+
+  .nav-link {
+    color: $font-grey;
+
+    &:hover {
+      color: $white;
+    }
+  }
+
+  .navbar-dark .navbar-text {
+    color: $white;
+  }
+}
+
+.navbar-brand:hover {
+  filter: invert(0.8);
+
+  transition: all ease-in-out 0.2s;
+}
