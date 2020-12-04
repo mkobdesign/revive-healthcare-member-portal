@@ -12,7 +12,7 @@ import { StaticQuery, graphql } from "gatsby";
 import "fontsource-roboto/400-normal.css";
 import "fontsource-roboto/500-normal.css";
 
-import Header from "./header";
+import Sidebar from "./sidebar"
 import Footer from "./footer";
 import "../styles/main.scss";
 
@@ -29,7 +29,7 @@ const Layout = ({ children }) => (
     `}
     render={(data) => (
       <>
-        <Header siteTitle={data.site.siteMetadata.title} />
+        <Sidebar siteTitle={data.site.siteMetadata.title} />
         <main>{children}</main>
         <Footer />
       </>
