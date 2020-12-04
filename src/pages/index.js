@@ -20,7 +20,7 @@ const IndexPage = () => (
           <h3>A Gatsby Starter I personally use for my own projects.</h3>
         </Col>
         <Col className="my-auto">
-          <h3>Features</h3>
+          <h3>Featuresss</h3>
           <ul>
             <li>Gatsby v2</li>
             <li>
