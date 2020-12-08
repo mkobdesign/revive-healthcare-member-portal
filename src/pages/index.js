@@ -1,10 +1,10 @@
 import React from "react"
+import { Link } from "gatsby";
 
 import Container from "react-bootstrap/Container"
 import Row from "react-bootstrap/Row"
 import Col from "react-bootstrap/Col"
-
-import gatsbyLogo from "../../static/images/gatsby-logo.svg"
+import Card from "react-bootstrap/Card"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -14,111 +14,77 @@ const IndexPage = () => (
     <SEO title="Home" />
     <Container fluid>
       <Row>
-        <Col className="text-center my-auto">
-          <img src={gatsbyLogo} alt="Logo" width="300" />
-          <h1>LOTUS STARTER</h1>
-          <h3>A Gatsby Starter I personally use for my own projects.</h3>
+        <Col xl={12} className="mb-5">
+          <Card className="revive-blue-bg image-below-card intro-card border-0">
+            <Card.Img src="/images/countryside.svg" alt="Card image" />
+                <Card.ImgOverlay>
+                  <h2>Good morning, Ryan</h2>
+                  <Card.Text>
+                    What would you like to do today?
+                  </Card.Text>
+              </Card.ImgOverlay>
+          </Card>
         </Col>
-        <Col className="my-auto">
-          <h3>Featuressszzzzz</h3>
-          <ul>
-            <li>Gatsby v2</li>
-            <li>
-              <a href="https://getbootstrap.com/">Bootstrap</a> +{" "}
-              <a href="https://react-bootstrap.github.io/">React Bootstrap</a>
-            </li>
-            <li>
-              <a href="https://github.com/react-icons/react-icons">
-                React Icons
-              </a>
-            </li>
-            <li>
-              <a href="https://github.com/fontsource/fontsource">Fontsource</a>{" "}
-              +{" "}
-            </li>
-            <li>
-              <a href="https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-image">
-                Image Processing
-              </a>{" "}
-              /{" "}
-              <a href="https://github.com/vzhou842/gatsby-plugin-optimize-svgs">
-                SVGO Optimizations
-              </a>
-            </li>
-            <li>SEO Generation</li>
-            <ul>
-              <li>
-                <a href="https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-plugin-sitemap">
-                  Sitemap Generation
-                </a>
-              </li>
-              <li>
-                <a href="https://github.com/mdreizin/gatsby-plugin-robots-txt">
-                  Robots.txt Generation
-                </a>
-              </li>
-              <li>Site Metadata</li>
-            </ul>
-            <li>PWA Support</li>
-            <ul>
-              <li>
-                <a href="https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-plugin-manifest">
-                  Web Manifest Generation
-                </a>
-              </li>
-              <li>
-                <a href="https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-plugin-manifest">
-                  Responsive Favicon Generation
-                </a>
-              </li>
-              <li>
-                <a href="https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-plugin-offline">
-                  Service Worker Offline Support
-                </a>
-              </li>
-              <li>
-                <a href="https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-plugin-nprogress">
-                  nprogress Loading Bar for Slow Connections
-                </a>
-              </li>
-            </ul>
-            <li>Development Tooling</li>
-            <ul>
-              <li>
-                <a href="https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-plugin-sass">
-                  SASS Support
-                </a>
-              </li>
-              <li>
-                <a href="https://preset-env.cssdb.org/">PostCSS Preset Env</a>
-              </li>
-              <li>
-                <a href="https://cssnano.co/">CSSNano</a>
-              </li>
-              <li>
-                <a href="https://eslint.org/">ESLint</a>
-              </li>
-              <li>
-                <a href="https://prettier.io/">Prettier</a>
-              </li>
-              <li>
-                <a href="https://stylelint.io/">Stylelint</a>
-              </li>
-            </ul>
-            <li>Continuous Integration and Deployment</li>
-            <ul>
-              <li>
-                <a href="https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-plugin-netlify">
-                  Netlify Header Generation
-                </a>
-              </li>
-              <li>
-                <a href="https://circleci.com/">CircleCI Configuration</a>
-              </li>
-              <li>Caching for Yarn and Gatsby for Quicker Build Times</li>
-              <li>Automatic Deployment to Netlify</li>
-            </ul>
-          </ul>
+      </Row>
+      <Row>
+        <Col md={12} lg={6}>
+          <Link to="/">
+            <Card className="shadow-sm border-0 mb-5">
+              <Card.Img src="/images/dr2.svg" alt="Dr" />
+              <Card.ImgOverlay>
+                <h4>Schedule a Virtual Visit</h4>
+              </Card.ImgOverlay>
+            </Card>
+          </Link>
+        </Col>
+        <Col md={12} lg={6}>
+          <Link to="/install">
+            <Card className="shadow-sm border-0 mb-5">
+              <Card.Img src="/images/counselor.svg" alt="Counselor" />
+              <Card.ImgOverlay>
+                <h4>Speak with a Counselor</h4>
+              </Card.ImgOverlay>
+            </Card>
+          </Link>
+          <Row>
+        <Col sm={12} md={6}>
+          <Link to="/install">
+            <Card className="shadow-sm border-0 mb-5">
+                <Card.Img src="/images/drug.svg" alt="Counselor" />
+                <Card.ImgOverlay>
+                  <h4 align="right">Renew your <br />Prescription</h4>
+                </Card.ImgOverlay>
+              </Card>
+          </Link>
+        </Col>
+        <Col sm={12} md={6}>
+          <Link to="/install">
+            <Card className="shadow-sm border-0 mb-5">
+                <Card.Img src="/images/benefits.svg" alt="Counselor" />
+                <Card.ImgOverlay>
+                  <h4>Access your <br />Discounts</h4>
+                </Card.ImgOverlay>
+              </Card>
+          </Link>
+        </Col>
+      </Row>
+        </Col>
+      </Row>
+      <Row>
+        <Col xl={12} className="mb-5">
+          <Card className="text-white text-center border-0 feature">
+            <Card.Img src="/images/feature.svg" alt="Feature" />
+            <Card.ImgOverlay>
+              <Card.Text className="subtitle-caps">
+                December Feature
+              </Card.Text>
+              <h2 className="title">Keep a clear head this holiday season</h2>
+              <div class="col-xs-12 col-xs-offset-0 mx-auto col-sm-offset-3 col-sm-6">
+                <a href="/" class="btn btn-secondary btn-lg btn-block">Redeem Your Headspace Discount</a>
+              </div>
+              
+            </Card.ImgOverlay>
+          </Card>
         </Col>
       </Row>
     </Container>

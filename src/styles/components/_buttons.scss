@@ -1,14 +1,15 @@
 /* Buttons SCSS */
 .btn {
-  width: 150px;
   padding: 12px 9px 12px 9px;
-
   font-weight: 700;
   font-size: 13.5px;
   letter-spacing: 0.5px;
-
-  border-radius: 13px;
+  border-radius: 4px;
 }
+.btn-secondary {
+  border-radius: 5rem;
+}
+
 
 .random-button {
   box-sizing: border-box;
@@ -28,4 +29,7 @@
     background-color: $blue;
     border-color: white;
   }
+}
+button:focus {
+  outline:5px auto $revive-blue;
 }

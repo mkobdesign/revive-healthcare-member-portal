@@ -12,8 +12,11 @@ import { StaticQuery, graphql } from "gatsby";
 import "fontsource-roboto/400-normal.css";
 import "fontsource-roboto/500-normal.css";
 
+import Container from "react-bootstrap/Container";
+import Col from "react-bootstrap/Col";
+import Row from 'react-bootstrap/Row'
+
 import Sidebar from "./sidebar"
-import Footer from "./footer";
 import "../styles/main.scss";
 
 const Layout = ({ children }) => (
@@ -29,9 +32,14 @@ const Layout = ({ children }) => (
     `}
     render={(data) => (
       <>
-        <Sidebar siteTitle={data.site.siteMetadata.title} />
-        <main>{children}</main>
-        <Footer />
+        <Container fluid className="sitewrap">
+          <Row>
+            <Sidebar siteTitle={data.site.siteMetadata.title} />
+            <Col className="col-md-9 ml-sm-auto col-lg-9 px-4 main-content">
+              <main>{children}</main>
+            </Col>
+          </Row>
+        </Container>
       </>
     )}
   />

@@ -1,7 +1,53 @@
 /* Sidebar SCSS */
+@import 'node_modules/bootstrap/scss/functions';
+@import 'node_modules/bootstrap/scss/variables';
+@import 'node_modules/bootstrap/scss/mixins/_breakpoints';
+
 .sidebar {
   background-color: $revive-light-blue;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
 
+  .navbar-brand {
+    margin-bottom: 80px;
+  }
+  .nav-item {
+    padding: 10px 0px;
+  }
+  .navbar {
+  flex-flow: row wrap;
+  }
+  ul.nav {
+    flex: 1;
+  }
+  a.nav-link {
+    color: $revive-black;
+    font-size: 22px;
+    padding: 0.5rem 1rem 0.5rem 0;
+
+      img {
+      filter: brightness(0%);
+      margin-right:15px;
+      }
+      span {
+      font-size: 16px;
+      }
+      
+  }
+      
+
+}
+  a.nav-link.active-link {
+    color: $revive-blue;
+
+     img {
+        filter: brightness(100%);
+
+    }
+  }
   .navbar-dark .navbar-nav .nav-link {
     color: $font-grey;
 
@@ -14,9 +60,14 @@
     }
   }
 
-  .navbar-brand:hover {
-    filter: invert(0.8);
 
-    transition: all ease-in-out 0.2s;
+
+@include media-breakpoint-down(md) {
+    .sidebar {
+      height: 90px;
+
+      a.nav-link {
+        font-size: 17px;
+      }
+    }
   }
-}

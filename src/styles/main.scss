@@ -1,11 +1,21 @@
+$theme-colors: (
+  'primary': #44797B,
+  'secondary': rgba(253, 201, 0, 1),
+  'info':#44797B,
+);
+
+$spacing: (
+    'mb-6': 3rem !important,
+);
+
 @import "~bootstrap/scss/bootstrap";
 
 @import "base/variables";
 @import "base/root";
 
 @import "components/buttons";
-@import "components/footer";
 @import "components/header";
 @import "components/sidebar";
+@import 'components/card';
 
 @import "pages/index";

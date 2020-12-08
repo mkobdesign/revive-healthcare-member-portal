@@ -18,14 +18,42 @@ body {
   -webkit-text-stroke: 0.025em rgba(51, 51, 51, 0.05);
 }
 
+img {
+  max-width: 100%;
+}
+
+
+a {
+  color: $revive-blue;
+}
+
+a.text-link {
+  font-weight: bold;
+  display: block;
+}
+
 p {
   margin: auto;
-
   font-weight: 400;
-  font-size: 1.15rem;
+  font-size: 1.125rem;
   line-height: 1.8em;
   letter-spacing: 0.5px;
 }
+p.big {
+  font-size: 1.25rem;
+}
+
+.extra-large {font-size:3.5rem;}
+.step {
+    padding: 12px;
+    background-color: #44797b;
+    border-radius: 100px;
+    color: #fff;
+    width: 48px;
+    height: 48px;
+    display: block;
+    text-align: center;
+  }
 
 img {
   user-select: none;
@@ -36,3 +64,17 @@ img {
 
   background: black;
 }
+.revive-blue-bg {
+  background-color: $revive-blue;
+}
+
+.revive-light-blue-bg {
+  background-color: $revive-light-blue;
+}
+
+@include media-breakpoint-down(md) {
+  .main-content {
+    padding-top: 90px;
+  }
+}
+
