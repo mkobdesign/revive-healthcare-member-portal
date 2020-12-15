@@ -55,6 +55,13 @@ module.exports = {
         display: `standalone`,
       },
     },
+    {
+      resolve: "gatsby-plugin-auth0",
+      options: {
+        domain: "revive-dev.us.auth0.com",
+        clientID: "ATcERwqyrXYmuaOsNrjo04LrbDPDpgWL",
+      }
+    }
     // {
     //   resolve: "gatsby-plugin-offline",
     //   options: {

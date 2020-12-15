@@ -1,12 +1,12 @@
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
-		module.exports = factory(require("/Users/mikeobrien/revive-healthcare-member-portal/node_modules/@reach/router/index.js"), require("fs"), require("/Users/mikeobrien/revive-healthcare-member-portal/node_modules/lodash/merge.js"), require("path"), require("react"), require("react-dom/server"), require("react-helmet"));
+		module.exports = factory(require("/Users/michaelobrien/revive-healthcare-member-portal-2/node_modules/@reach/router/index.js"), require("fs"), require("/Users/michaelobrien/revive-healthcare-member-portal-2/node_modules/lodash/merge.js"), require("path"), require("react"), require("react-dom/server"), require("react-helmet"));
 	else if(typeof define === 'function' && define.amd)
-		define("lib", ["/Users/mikeobrien/revive-healthcare-member-portal/node_modules/@reach/router/index.js", "fs", "/Users/mikeobrien/revive-healthcare-member-portal/node_modules/lodash/merge.js", "path", "react", "react-dom/server", "react-helmet"], factory);
+		define("lib", ["/Users/michaelobrien/revive-healthcare-member-portal-2/node_modules/@reach/router/index.js", "fs", "/Users/michaelobrien/revive-healthcare-member-portal-2/node_modules/lodash/merge.js", "path", "react", "react-dom/server", "react-helmet"], factory);
 	else if(typeof exports === 'object')
-		exports["lib"] = factory(require("/Users/mikeobrien/revive-healthcare-member-portal/node_modules/@reach/router/index.js"), require("fs"), require("/Users/mikeobrien/revive-healthcare-member-portal/node_modules/lodash/merge.js"), require("path"), require("react"), require("react-dom/server"), require("react-helmet"));
+		exports["lib"] = factory(require("/Users/michaelobrien/revive-healthcare-member-portal-2/node_modules/@reach/router/index.js"), require("fs"), require("/Users/michaelobrien/revive-healthcare-member-portal-2/node_modules/lodash/merge.js"), require("path"), require("react"), require("react-dom/server"), require("react-helmet"));
 	else
-		root["lib"] = factory(root["/Users/mikeobrien/revive-healthcare-member-portal/node_modules/@reach/router/index.js"], root["fs"], root["/Users/mikeobrien/revive-healthcare-member-portal/node_modules/lodash/merge.js"], root["path"], root["react"], root["react-dom/server"], root["react-helmet"]);
+		root["lib"] = factory(root["/Users/michaelobrien/revive-healthcare-member-portal-2/node_modules/@reach/router/index.js"], root["fs"], root["/Users/michaelobrien/revive-healthcare-member-portal-2/node_modules/lodash/merge.js"], root["path"], root["react"], root["react-dom/server"], root["react-helmet"]);
 })(this, function(__WEBPACK_EXTERNAL_MODULE__reach_router__, __WEBPACK_EXTERNAL_MODULE_fs__, __WEBPACK_EXTERNAL_MODULE_lodash_merge__, __WEBPACK_EXTERNAL_MODULE_path__, __WEBPACK_EXTERNAL_MODULE_react__, __WEBPACK_EXTERNAL_MODULE_react_dom_server__, __WEBPACK_EXTERNAL_MODULE_react_helmet__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
@@ -95,17 +95,6 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ })
 /************************************************************************/
 /******/ ({
-
-/***/ "./.cache/_this_is_virtual_fs_path_/$virtual/lazy-client-sync-requires":
-/*!*****************************************************************************!*\
-  !*** ./.cache/_this_is_virtual_fs_path_/$virtual/lazy-client-sync-requires ***!
-  \*****************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-
-
-/***/ }),
 
 /***/ "./.cache/api-runner-ssr.js":
 /*!**********************************!*\
@@ -215,6 +204,7 @@ module.exports = function (api, args, defaultReturn, argTransform) {
  * rendering.
  * @param {object} $0
  * @param {string} $0.pathname The pathname of the page currently being rendered.
+ * @param {ReactNode} $0.bodyComponent The React element to be rendered as the page body
  * @param {function} $0.replaceBodyHTMLString Call this with the HTML string
  * you render. **WARNING** if multiple plugins implement this API it's the
  * last plugin that "wins". TODO implement an automated warning against this.
@@ -620,64 +610,6 @@ var emitter = Object(mitt__WEBPACK_IMPORTED_MODULE_0__["default"])();
 
 /***/ }),
 
-/***/ "./.cache/ensure-page-component-in-bundle.js":
-/*!***************************************************!*\
-  !*** ./.cache/ensure-page-component-in-bundle.js ***!
-  \***************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-var didCallServer = new Set();
-
-var ensureComponentInBundle = function ensureComponentInBundle(chunkName) {
-  return new Promise(function (resolve, reject) {
-    if (!didCallServer.has(chunkName)) {
-      var req = new XMLHttpRequest();
-      req.open("post", "/___client-page-visited", true);
-      req.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-      req.send(JSON.stringify({
-        chunkName: chunkName
-      }));
-      didCallServer.add(chunkName);
-    } // Tell the server the user wants to visit this page
-    // to trigger it compiling the page component's code.
-    //
-    // Try for 30 seconds and then error.
-
-
-    var checkCount = 0;
-
-    var checkForBundle = function checkForBundle() {
-      checkCount += 1;
-
-      if (checkCount > 299) {
-        reject("Loading the page component " + chunkName + " timed out after 30 seconds");
-      } // Check if the bundle is included and return.
-
-
-      if (true) {
-        delete __webpack_require__.c[/*require.resolve*/(/*! $virtual/lazy-client-sync-requires */ "./.cache/_this_is_virtual_fs_path_/$virtual/lazy-client-sync-requires")];
-      }
-
-      var lazyRequires = __webpack_require__(/*! $virtual/lazy-client-sync-requires */ "./.cache/_this_is_virtual_fs_path_/$virtual/lazy-client-sync-requires");
-
-      if (lazyRequires.lazyComponents[chunkName]) {
-        resolve(lazyRequires.lazyComponents[chunkName]);
-      } else {
-        setTimeout(checkForBundle, 100);
-      }
-    };
-
-    checkForBundle();
-  });
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (ensureComponentInBundle);
-
-/***/ }),
-
 /***/ "./.cache/find-path.js":
 /*!*****************************!*\
   !*** ./.cache/find-path.js ***!
@@ -889,15 +821,7 @@ function StaticQueryDataRenderer(_ref) {
       data = _ref.data,
       query = _ref.query,
       render = _ref.render;
-  var combinedStaticQueryData = staticQueryData;
-
-  if (({}).GATSBY_EXPERIMENTAL_LAZY_DEVJS) {
-    // when we remove the flag, we don't need to combine them
-    // w/ changes @pieh made.
-    combinedStaticQueryData = Object.assign({}, Object(_loader__WEBPACK_IMPORTED_MODULE_5__["getStaticQueryResults"])(), staticQueryData);
-  }
-
-  var finalData = data ? data.data : combinedStaticQueryData[query] && combinedStaticQueryData[query].data;
+  var finalData = data ? data.data : staticQueryData[query] && staticQueryData[query].data;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, finalData && render(finalData), !finalData && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Loading (StaticQuery)"));
 }
 
@@ -917,6 +841,8 @@ var StaticQuery = function StaticQuery(props) {
 };
 
 var useStaticQuery = function useStaticQuery(query) {
+  var _context$query;
+
   if (typeof react__WEBPACK_IMPORTED_MODULE_0___default.a.useContext !== "function" && "development" === "development") {
     throw new Error("You're likely using a version of React that doesn't support Hooks\n" + "Please update React and ReactDOM to 16.8.0 or later to use the useStaticQuery hook.");
   }
@@ -929,36 +855,11 @@ var useStaticQuery = function useStaticQuery(query) {
     throw new Error("useStaticQuery was called with a string but expects to be called using `graphql`. Try this:\n\nimport { useStaticQuery, graphql } from 'gatsby';\n\nuseStaticQuery(graphql`" + query + "`);\n");
   }
 
-  var queryNotFound = false;
-
-  if (({}).GATSBY_EXPERIMENTAL_LAZY_DEVJS) {
-    var _staticQueryData$quer;
-
-    // Merge data loaded via socket.io & xhr
-    // when we remove the flag, we don't need to combine them
-    // w/ changes @pieh made.
-    var staticQueryData = Object.assign({}, Object(_loader__WEBPACK_IMPORTED_MODULE_5__["getStaticQueryResults"])(), context);
-
-    if ((_staticQueryData$quer = staticQueryData[query]) !== null && _staticQueryData$quer !== void 0 && _staticQueryData$quer.data) {
-      return staticQueryData[query].data;
-    } else {
-      queryNotFound = true;
-    }
+  if ((_context$query = context[query]) !== null && _context$query !== void 0 && _context$query.data) {
+    return context[query].data;
   } else {
-    var _context$query;
-
-    if ((_context$query = context[query]) !== null && _context$query !== void 0 && _context$query.data) {
-      return context[query].data;
-    } else {
-      queryNotFound = true;
-    }
-  }
-
-  if (queryNotFound) {
     throw new Error("The result of this StaticQuery could not be fetched.\n\n" + "This is likely a bug in Gatsby and if refreshing the page does not fix it, " + "please open an issue in https://github.com/gatsbyjs/gatsby/issues");
   }
-
-  return null;
 };
 
 StaticQuery.propTypes = {
@@ -1160,29 +1061,6 @@ var BaseLoader = /*#__PURE__*/function () {
 
           if (jsonPayload.path === undefined) {
             throw new Error("not a valid pageData response");
-          } // In development, check if the page is in the bundle yet.
-
-
-          if ( true && ({}).GATSBY_EXPERIMENTAL_LAZY_DEVJS) {
-            var ensureComponentInBundle = __webpack_require__(/*! ./ensure-page-component-in-bundle */ "./.cache/ensure-page-component-in-bundle.js").default;
-
-            if (true) {
-              delete __webpack_require__.c[/*require.resolve*/(/*! $virtual/lazy-client-sync-requires */ "./.cache/_this_is_virtual_fs_path_/$virtual/lazy-client-sync-requires")];
-            }
-
-            var lazyRequires = __webpack_require__(/*! $virtual/lazy-client-sync-requires */ "./.cache/_this_is_virtual_fs_path_/$virtual/lazy-client-sync-requires");
-
-            if (lazyRequires.notVisitedPageComponents[jsonPayload.componentChunkName]) {
-              // Tell the server the user wants to visit this page
-              // to trigger it including the page component's code in the
-              // commons bundles.
-              ensureComponentInBundle(jsonPayload.componentChunkName);
-              return new Promise(function (resolve) {
-                return setTimeout(function () {
-                  return resolve(_this2.fetchPageDataJson(loadObj));
-                }, 100);
-              });
-            }
           }
 
           return Object.assign(loadObj, {
@@ -33811,9 +33689,9 @@ if (false) {} else {
 /***/ }),
 
 /***/ "@reach/router":
-/*!********************************************************************************************************!*\
-  !*** external "/Users/mikeobrien/revive-healthcare-member-portal/node_modules/@reach/router/index.js" ***!
-  \********************************************************************************************************/
+/*!*************************************************************************************************************!*\
+  !*** external "/Users/michaelobrien/revive-healthcare-member-portal-2/node_modules/@reach/router/index.js" ***!
+  \*************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -33833,9 +33711,9 @@ module.exports = __WEBPACK_EXTERNAL_MODULE_fs__;
 /***/ }),
 
 /***/ "lodash/merge":
-/*!*************************************************************************************************!*\
-  !*** external "/Users/mikeobrien/revive-healthcare-member-portal/node_modules/lodash/merge.js" ***!
-  \*************************************************************************************************/
+/*!******************************************************************************************************!*\
+  !*** external "/Users/michaelobrien/revive-healthcare-member-portal-2/node_modules/lodash/merge.js" ***!
+  \******************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
