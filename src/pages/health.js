@@ -22,13 +22,15 @@ const Health = () => (
                   MY HEALTH
                 </Card.Text>
                     <h1>Putting your health first</h1>
+                  <Col md={6} noGutters>
                     <Card.Text className="mb-4">
                      Have a medical question? Ask one of our nurses for those non-urgent things that come up in life.
                     </Card.Text>
-                    <Link to="/install" className="btn btn-primary btn-lg">
-                      Speak with a Nurse
-                    </Link>
-                </Card.ImgOverlay>
+                    <a href="tel:18888888888" target="_blank" rel="noreferrer" className="text-link">
+                    Call 1-888-888-8888 to Speak with a Nurse
+                    </a>
+                  </Col>
+              </Card.ImgOverlay>
           </Card>
         </Col>
       </Row>

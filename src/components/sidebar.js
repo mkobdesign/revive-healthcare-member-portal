@@ -8,8 +8,8 @@ import Navbar from "react-bootstrap/Navbar";
 import Col from "react-bootstrap/Col"
 
 const Sidebar = ({ siteTitle }) => (
-  <nav className="sidebar flex-column col-md-3">
-      <Navbar collapseOnSelect expand="md" variant="light">
+  <nav className="sidebar flex-column col-md-3 d-flex flex-column flex-1">
+      <Navbar collapseOnSelect expand="md" variant="light" className="d-flex flex-column flex-1">
         <Navbar.Brand href="/">
              <img
             src={logo}
@@ -21,9 +21,9 @@ const Sidebar = ({ siteTitle }) => (
         </Navbar.Brand>
       
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Collapse id="responsive-navbar-nav justify-content-end">
-          <Col sm={12}>
-            <ul class="nav align-top">
+        <Navbar.Collapse id="responsive-navbar-nav">
+          <Col sm={12} className="align-items-stretch d-flex flex-column mw-250">
+            <ul class="nav align-top d-flex">
             <li class="nav-item">
               <Link to="/" className="nav-link" activeClassName="active-link">
                 <img src="./images/icons/grid.svg" alt="" width="24" height="24" title="Dashboard" />
@@ -52,16 +52,6 @@ const Sidebar = ({ siteTitle }) => (
             </li>
             <li class="nav-item">
               <Link
-                to="/financial"
-                className="nav-link"
-                activeClassName="active-link"
-              >
-                <img src="./images/icons/dollar.svg" alt="" width="24" height="24" title="dollar" />
-                Financial
-              </Link>
-            </li>
-            <li class="nav-item">
-              <Link
                 to="/bot"
                 className="nav-link"
                 activeClassName="active-link"
@@ -72,9 +62,7 @@ const Sidebar = ({ siteTitle }) => (
               </Link>
             </li>
           </ul>
-          </Col>
-          <Col sm={12}>
-            <ul class="nav align-bottom">
+            <ul class="nav align-bottom d-flex">
               <li class="nav-item">
                 <Link to="/help" className="nav-link" activeClassName="active-link">
                   <img src="./images/icons/help-circle.svg" alt="" width="24" height="24" title="Dashboard" />

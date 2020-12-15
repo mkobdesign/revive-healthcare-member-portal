@@ -1,11 +1,7 @@
 $theme-colors: (
-  'primary': #44797B,
-  'secondary': rgba(253, 201, 0, 1),
-  'info':#44797B,
-);
-
-$spacing: (
-    'mb-6': 3rem !important,
+  "primary": #44797b,
+  "secondary": rgba(253, 201, 0, 1),
+  "info": #44797b,
 );
 
 @import "~bootstrap/scss/bootstrap";
@@ -16,6 +12,7 @@ $spacing: (
 @import "components/buttons";
 @import "components/header";
 @import "components/sidebar";
-@import 'components/card';
+@import "components/card";
+@import "components/navbar";
 
 @import "pages/index";

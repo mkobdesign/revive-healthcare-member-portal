@@ -22,7 +22,6 @@ img {
   max-width: 100%;
 }
 
-
 a {
   color: $revive-blue;
 }
@@ -30,6 +29,10 @@ a {
 a.text-link {
   font-weight: bold;
   display: block;
+}
+
+.flex-1 {
+  flex: 1;
 }
 
 p {
@@ -43,17 +46,19 @@ p.big {
   font-size: 1.25rem;
 }
 
-.extra-large {font-size:3.5rem;}
+.extra-large {
+  font-size: 3.5rem;
+}
 .step {
-    padding: 12px;
-    background-color: #44797b;
-    border-radius: 100px;
-    color: #fff;
-    width: 48px;
-    height: 48px;
-    display: block;
-    text-align: center;
-  }
+  padding: 12px;
+  background-color: #44797b;
+  border-radius: 100px;
+  color: #fff;
+  width: 48px;
+  height: 48px;
+  display: block;
+  text-align: center;
+}
 
 img {
   user-select: none;
@@ -71,10 +76,14 @@ img {
 .revive-light-blue-bg {
   background-color: $revive-light-blue;
 }
-
+.mw-250 {
+  max-width: 250px;
+}
 @include media-breakpoint-down(md) {
   .main-content {
     padding-top: 90px;
   }
+  .mw-250 {
+    max-width: 100%;
+  }
 }
-

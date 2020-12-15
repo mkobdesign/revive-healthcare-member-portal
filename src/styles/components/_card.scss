@@ -1,49 +1,47 @@
 /* Card Customzation SCSS */
 
 .card {
+  h1 {
+    font-weight: bold;
+    font-size: 3rem;
+  }
 
-    h1 {
-     font-weight: bold;
-     font-size: 3rem;   
-    }
+  h2 {
+    font-size: 2.5rem;
+  }
 
-    h2 {
-        font-size:2.5rem;
-    }
+  .card-body {
+    padding: 1.75rem;
+  }
 
-    .card-body {
-        padding: 1.75rem;
-    }
+  .btn-light {
+    border-color: $revive-blue;
+    color: $revive-blue;
+  }
 
-    .btn-light {
-        border-color: $revive-blue;
-        color: $revive-blue;
-    }
+  .text-link {
+    font-weight: bold;
+  }
 
-    .text-link {
-        font-weight: bold;
+  &.image-below-card {
+    margin-bottom: 40px;
+    img.card-img {
+      margin-bottom: -40px;
     }
-
-    &.image-below-card {
-        margin-bottom: 40px;
-            img.card-img {
-                margin-bottom: -40px;
-            }
-
-    }
-    .subtitle-caps {
-        font-family: Boston;
-        font-size: 1.5rem;
-        font-style: normal;
-        font-weight: 300;
-        text-transform: uppercase;
-    }
-    .title {
-        font-size: 40px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 52px;
-    }
+  }
+  .subtitle-caps {
+    font-family: Boston;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+  .title {
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 52px;
+  }
 }
 .card-img-overlay {
   padding: 32px;

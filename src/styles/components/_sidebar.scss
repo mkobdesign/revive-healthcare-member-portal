@@ -1,7 +1,7 @@
 /* Sidebar SCSS */
-@import 'node_modules/bootstrap/scss/functions';
-@import 'node_modules/bootstrap/scss/variables';
-@import 'node_modules/bootstrap/scss/mixins/_breakpoints';
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/mixins/_breakpoints";
 
 .sidebar {
   background-color: $revive-light-blue;
@@ -18,7 +18,9 @@
     padding: 10px 0px;
   }
   .navbar {
-  flex-flow: row wrap;
+    flex-direction: column;
+    align-items: start;
+    display: flex;
   }
   ul.nav {
     flex: 1;
@@ -28,46 +30,40 @@
     font-size: 22px;
     padding: 0.5rem 1rem 0.5rem 0;
 
-      img {
+    img {
       filter: brightness(0%);
-      margin-right:15px;
-      }
-      span {
+      margin-right: 15px;
+    }
+    span {
       font-size: 16px;
-      }
-      
+    }
   }
-      
-
 }
-  a.nav-link.active-link {
-    color: $revive-blue;
+a.nav-link.active-link {
+  color: $revive-blue;
 
-     img {
-        filter: brightness(100%);
-
-    }
+  img {
+    filter: brightness(100%);
   }
-  .navbar-dark .navbar-nav .nav-link {
-    color: $font-grey;
+}
+.navbar-dark .navbar-nav .nav-link {
+  color: $font-grey;
 
-    &:hover {
-      color: $white;
-    }
-
-    &.active-link {
-      color: $white;
-    }
+  &:hover {
+    color: $white;
   }
 
-
+  &.active-link {
+    color: $white;
+  }
+}
 
 @include media-breakpoint-down(md) {
-    .sidebar {
-      height: 90px;
+  .sidebar {
+    height: 90px;
 
-      a.nav-link {
-        font-size: 17px;
-      }
+    a.nav-link {
+      font-size: 17px;
     }
   }
+}

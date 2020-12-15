@@ -44,7 +44,7 @@ const Wellness = () => (
                   </p>
                   <Col md={12} className="text-right text-link">
                     <Link to="/install">
-                      Call  1-888-888-8888 to Schedule
+                      Call 1-888-888-8888 to Schedule
                     </Link>
                   </Col>
             </Col>

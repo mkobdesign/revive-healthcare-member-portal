@@ -31,7 +31,7 @@ const Help = () => (
       </Row>
       <Row className="mb-5">
         <Col sm={12} md={6}>
-          <a href="mailto:help@revive-healthcare.com?subject=Help with Revive Health" target="_blank">
+          <a href="mailto:help@revive-healthcare.com?subject=Help with Revive Health" rel="noreferrer" target="_blank">
             <Card
               bg="info"
               text="white"
@@ -47,7 +47,7 @@ const Help = () => (
           </a>
         </Col>
         <Col sm={12} md={6}>
-          <a href="tel:18883358836" target="_blank">
+          <a href="tel:18883358836" target="_blank" rel="noreferrer">
             <Card
               bg="info"
               text="white"
