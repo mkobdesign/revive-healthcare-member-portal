@@ -79,6 +79,22 @@ img {
 .mw-250 {
   max-width: 250px;
 }
+
+.mb-6 {
+  margin-bottom: 4.5rem !important;
+}
+.mb-7 {
+  margin-bottom: 6rem !important;
+}
+
+.mb-8 {
+  margin-bottom: 7.5rem !important;
+}
+
+.mb-9 {
+  margin-bottom: 9rem !important;
+}
+
 @include media-breakpoint-down(md) {
   .main-content {
     padding-top: 90px;

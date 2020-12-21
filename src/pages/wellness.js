@@ -12,7 +12,7 @@ import { Link } from "gatsby";
 const Wellness = () => (
   <Layout>
     <SEO title="My Wellness" />
-    <Container>
+    <Container fluid>
       <Row className="mb-5"> 
         <Col xl={12} className="mb-5">
           <Card className="border-0">

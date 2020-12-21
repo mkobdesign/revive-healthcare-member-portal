@@ -60,9 +60,9 @@ const IndexPage = () => (
         <Col sm={12} md={6}>
           <Link to="/install">
             <Card className="shadow-sm border-0 mb-5">
-                <Card.Img src="/images/benefits.svg" alt="Counselor" />
+                <Card.Img src="/images/marketplace.svg" alt="Marketplace" />
                 <Card.ImgOverlay>
-                  <h4>Access your <br />Discounts</h4>
+                  <h4>Access the <br />Marketplace</h4>
                 </Card.ImgOverlay>
               </Card>
           </Link>

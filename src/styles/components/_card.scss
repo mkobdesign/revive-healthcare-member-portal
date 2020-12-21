@@ -14,11 +14,6 @@
     padding: 1.75rem;
   }
 
-  .btn-light {
-    border-color: $revive-blue;
-    color: $revive-blue;
-  }
-
   .text-link {
     font-weight: bold;
   }
@@ -45,4 +40,8 @@
 }
 .card-img-overlay {
   padding: 32px;
+}
+.card-ish {
+  padding: 64px 32px;
+  border-radius: 0.25rem;
 }

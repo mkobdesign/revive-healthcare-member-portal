@@ -1,6 +1,7 @@
 import { Link } from "gatsby";
 import PropTypes from "prop-types";
 import React from "react";
+import { useAuth0 } from "@auth0/auth0-react";
 
 import logo from "../../static/images/revive-healthcare-logo.png";
 
@@ -50,7 +51,7 @@ const Sidebar = ({ siteTitle }) => (
                 My Wellness
               </Link>
             </li>
-            <li class="nav-item">
+            {/* <li class="nav-item">
               <Link
                 to="/bot"
                 className="nav-link"
@@ -60,7 +61,7 @@ const Sidebar = ({ siteTitle }) => (
                 re:bot<br />
                 <span>Your Account Assistant</span>
               </Link>
-            </li>
+            </li> */}
           </ul>
             <ul class="nav align-bottom d-flex">
               <li class="nav-item">

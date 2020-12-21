@@ -9,6 +9,17 @@
 .btn-secondary {
   border-radius: 5rem;
 }
+.btn-light {
+  border-color: $revive-blue;
+  color: $revive-blue;
+  background-color: #ffffff;
+}
+
+.btn-light:hover {
+  border-color: $revive-blue;
+  color: #ffffff;
+  background-color: $revive-blue;
+}
 
 .random-button {
   box-sizing: border-box;
