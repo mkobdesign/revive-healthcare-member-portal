@@ -17,7 +17,7 @@ export default class RootWrapper extends Component {
 
     this.webAuth = new WebAuth({
       ...defaultAuthOptions,
-      redirectUri: `${redirectDomain}/login_callback`,
+      redirectUri: `${redirectDomain}/`,
       ...authOptions,
     })
 
