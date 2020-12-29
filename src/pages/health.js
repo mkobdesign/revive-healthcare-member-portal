@@ -25,7 +25,7 @@ const Health = () => (
                 <Row className="no-gutters">
                   <Col md={6}>
                     <Card.Text className="mb-4">
-                     Have a medical question? Ask one of our nurses for those non-urgent things that come up in life.
+                    Have a medical question? Ask one of our nurses for those non-urgent things that come up in life.
                     </Card.Text>
                     <a href="tel:18888888888" target="_blank" rel="noreferrer" className="text-link">
                     Call 1-888-888-8888 to Speak with a Nurse
@@ -44,11 +44,11 @@ const Health = () => (
             <Col md={8}>
                   <h2>See a Doctor, Anywhere </h2>
                   <Card.Text className="big mb-3">
-                    Schedule a virtual visit with a doctor wherever life takes you. Virtual visits give you the flexibility to see a doctor when you need it most.
+                  Schedule a virtual visit with a doctor wherever life takes you. Virtual visits give you the flexibility to see a doctor when you need it most.
                   </Card.Text>
-                  <Link to="/install" className="btn btn-outline-info float-right">
+                  <a href="https://myrevivehealth.sandbox.connectedcare.md/#/patient" className="btn btn-outline-info float-right">
                       Schedule a Virtual Visit
-                    </Link>
+                    </a>
             </Col>
       </Row>
 
@@ -56,11 +56,11 @@ const Health = () => (
             <Col md={8}>
                   <h2>Your Prescriptions. Now.</h2>
                   <Card.Text className="big mb-3">
-                    Fast and easy access to your prescriptions, delivered right to your door.
+                  Fast and easy access to your prescriptions, delivered right to your door.
                   </Card.Text>
-                  <Link to="/install" className="btn btn-outline-info">
+                  <a href="https://main.d2b2s0fjal3vo7.amplifyapp.com/auth/login" className="btn btn-outline-info">
                       Check your Prescriptions
-                    </Link>
+                    </a>
             </Col>
             <Col md={4}>
               <Card.Img src="/images/dr-color.svg" alt="Doctor" />
@@ -72,11 +72,11 @@ const Health = () => (
               
                   <h2>Stay Informed</h2>
                   <Card.Text className="big mb-3">
-                    Access our library to learn more about how you can take control of your well-being.
+                  Access our library to learn more about various health conditions.
                   </Card.Text>
-                    <Link to="/install" className="btn btn-light">
+                    <a href="https://www.wellrx.com/member/login/" className="btn btn-light">
                       Browse Library
-                    </Link>
+                    </a>
             </Col>
             <Col md={4}>
               <Card.Img src="/images/graphic-reading.svg" alt="Reading" />
@@ -92,9 +92,9 @@ const Health = () => (
                   <Card.Text className="big mb-3">
                     Order an at home kit, or go in to have your blood sample taken. Your choice!
                   </Card.Text>
-                  <Link to="/install" className="btn btn-outline-info float-right">
+                  <a href="https://www.wellconnectplus.com/?company=XEG808" className="btn btn-outline-info float-right">
                       Get your Blood work
-                    </Link>
+                    </a>
             </Col>
       </Row>
 

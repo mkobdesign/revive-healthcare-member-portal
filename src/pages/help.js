@@ -16,7 +16,7 @@ const Help = () => (
        <Row className="mb-5"> 
         <Col xl={12} className="mb-5">
           <Card className="border-0">
-                <Card.Img src="/images/team.svg" alt="Team" />
+                <Card.Img src="/images/help-hero.svg" alt="Team" />
                 <Card.ImgOverlay>
                   <Card.Text className="subtitle-caps">
                   Help
