@@ -25,15 +25,16 @@ const Wellness = () => (
                     <Card.Text className="mb-4">
                       Access to your wellness benefits in one easy click.
                     </Card.Text>
-                    <Link to="/install" className="btn btn-primary btn-lg">
+                    <a href="https://myrevivehealth.medikeeper.com/accounts/v8/ReviveHealth/login" className="btn btn-primary btn-lg">
                       Take your Assessment
-                    </Link>
+                    </a>
                 </Card.ImgOverlay>
           </Card>
         </Col>
       </Row>
 
       <Row className="mb-5">
+        <a id="counseling" />
             <Col md={4}>
               <Card.Img src="/images/your-time.svg" alt="Card image" />
             </Col>
@@ -50,23 +51,21 @@ const Wellness = () => (
             </Col>
       </Row>
       
-      <Row className="mb-5">
-          <Card className="border-0 revive-light-blue-bg">
-            <Col md={8}>
-              <Card.Body>
-                  <h2>Stay Informed</h2>
-                  <Card.Text className="big mb-3">
-                    Access our library to learn more about how you can take control of your well-being.
-                  </Card.Text>
-                    <Link to="/install" className="btn btn-light">
-                      Browse Library
-                    </Link>
-              </Card.Body>
-            </Col>
-            <Col md={4}>
-              <Card.Img src="/images/graphic-reading.svg" alt="Reading" />
-            </Col>
-        </Card>
+      <Row className="mb-8 revive-light-blue-bg card-ish">
+
+      <Col md={8}>
+              
+      <h2>A little help for yourself</h2>
+              <Card.Text className="big mb-3">
+              Our self-help tools support you from the comfort of your home, or office, or anywhere else
+              </Card.Text>
+              <a href="https://myrevivehealth.medikeeper.com/accounts/v8/ReviveHealth/login" className="btn btn-light">
+                    Help Yourself
+                    </a>
+        </Col>
+        <Col md={4}>
+          <Card.Img src="/images/reading2.svg" alt="Reading" />
+        </Col>
       </Row>
 
       <Row className="mb-5">
@@ -84,7 +83,7 @@ const Wellness = () => (
             <Col md={10}>
               <h4>Health Risk Assessment (HRA)</h4>
               <p className="mb-3">Take our HRA to better understand where you are at in your health journey. </p>
-              <a href="/" className="text-link text-right">Take the HRA ></a>
+              <a href="https://myrevivehealth.medikeeper.com/accounts/v8/ReviveHealth/login" className="text-link text-right">Take the HRA ></a>
             </Col>
           </Row>
           <Row className="mb-5">
@@ -94,7 +93,7 @@ const Wellness = () => (
             <Col md={10}>
               <h4>Biometrics</h4>
               <p className="mb-3">Your height, weight, waist circumference and some basic blood work help evaluate your overall health and will help your health coach craft a plan just for you.</p>
-              <a href="/" className="text-link text-right">Get your Biometrics ></a>
+              <a href="https://www.wellconnectplus.com/?company=XEG808" className="text-link text-right">Get your Biometrics ></a>
             </Col>
           </Row>
           <Row className="mb-5">
@@ -104,7 +103,7 @@ const Wellness = () => (
             <Col md={10}>
               <h4>Talk to a Health Coach</h4>
               <p className="mb-3">Get an expert involved to help you understand your HRA and biometric results. A health coach is the perfect addition to take your journey to the next level.</p>
-              <a href="/" className="text-link text-right">Schedule a Session with a Health Coach ></a>
+              <a href="https://www.wellconnectplus.com/?company=XEG808" className="text-link text-right">Schedule a Session with a Health Coach ></a>
             </Col>
           </Row>
         </Col>

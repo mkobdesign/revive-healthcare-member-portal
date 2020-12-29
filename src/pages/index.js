@@ -28,17 +28,17 @@ const IndexPage = () => (
       </Row>
       <Row>
         <Col md={12} lg={6}>
-          <Link to="/">
+          <a href="https://myrevivehealth.sandbox.connectedcare.md/#/patient">
             <Card className="shadow-sm border-0 mb-5">
               <Card.Img src="/images/dr2.svg" alt="Dr" />
               <Card.ImgOverlay>
                 <h4>Schedule a Virtual Visit</h4>
               </Card.ImgOverlay>
             </Card>
-          </Link>
+            </a>
         </Col>
         <Col md={12} lg={6}>
-          <Link to="/install">
+          <Link to="/wellness#counseling">
             <Card className="shadow-sm border-0 mb-5">
               <Card.Img src="/images/counselor.svg" alt="Counselor" />
               <Card.ImgOverlay>
@@ -48,24 +48,24 @@ const IndexPage = () => (
           </Link>
           <Row>
         <Col sm={12} md={6}>
-          <Link to="/install">
+          <a href="https://main.d2b2s0fjal3vo7.amplifyapp.com/auth/login">
             <Card className="shadow-sm border-0 mb-5">
                 <Card.Img src="/images/drug.svg" alt="Counselor" />
                 <Card.ImgOverlay>
                   <h4 align="right">Renew your <br />Prescription</h4>
                 </Card.ImgOverlay>
               </Card>
-          </Link>
+          </a>
         </Col>
         <Col sm={12} md={6}>
-          <Link to="/install">
+          <a href="https://myrevive.benefithub.com/Account/Login?ReturnUrl=%2f">
             <Card className="shadow-sm border-0 mb-5">
                 <Card.Img src="/images/marketplace.svg" alt="Marketplace" />
                 <Card.ImgOverlay>
                   <h4>Access the <br />Marketplace</h4>
                 </Card.ImgOverlay>
               </Card>
-          </Link>
+          </a>
         </Col>
       </Row>
         </Col>
