@@ -43,10 +43,10 @@ const Wellness = () => (
                   <p className="big mb-4">
                     Our specially trained representatives will match you with the right counselor for your specific mental Wellness needs. 
                   </p>
-                  <Col md={12} className="text-right text-link">
-                    <Link to="/install">
-                      Call 1-888-888-8888 to Schedule
-                    </Link>
+                  <Col md={12} className="text-right">
+                    <a href="tel:18443905052" class="text-link">
+                      Call 1-844-390-5052 to Schedule
+                    </a>
                   </Col>
             </Col>
       </Row>
@@ -78,7 +78,7 @@ const Wellness = () => (
         <Col md={8}>
           <Row className="mb-5">
             <Col md={2}>
-              <span className="step">1</span>
+              <span className="step float-right">1</span>
             </Col>
             <Col md={10}>
               <h4>Health Risk Assessment (HRA)</h4>
@@ -88,7 +88,7 @@ const Wellness = () => (
           </Row>
           <Row className="mb-5">
             <Col md={2}>
-              <span className="step">2</span>
+              <span className="step float-right">2</span>
             </Col>
             <Col md={10}>
               <h4>Biometrics</h4>
@@ -98,7 +98,7 @@ const Wellness = () => (
           </Row>
           <Row className="mb-5">
             <Col md={2}>
-              <span className="step">2</span>
+              <span className="step float-right">3</span>
             </Col>
             <Col md={10}>
               <h4>Talk to a Health Coach</h4>

@@ -7,7 +7,6 @@ import Card from "react-bootstrap/Card"
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
-import { Link } from "gatsby";
 
 const Health = () => (
   <Layout>
