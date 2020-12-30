@@ -70,27 +70,6 @@ const IndexPage = () => (
       </Row>
         </Col>
       </Row>
-      <Row>
-        <Col xl={12} className="mb-n2 mr-n3 d-flex flex-column justify-content-center align-items-center">
-          <Card className="text-white text-center border-0 feature">
-            <Card.Img src="/images/feature.svg" alt="Feature" />
-            <Card.ImgOverlay>
-            <div class="col-xs-12 d-flex align-items-center flex-column">
-              <Card.Text className="subtitle-caps">
-                December Feature
-              </Card.Text>
-              <h2 className="title">Keep a clear head this holiday season</h2>
-              <div class="col-xs-12 col-xs-offset-0 mx-auto col-sm-offset-3 col-sm-6">
-                <a href="/" class="btn btn-secondary btn-lg btn-block">Redeem Your Headspace Discount</a>
-              </div>
-              </div>
-              
-              
-              
-            </Card.ImgOverlay>
-          </Card>
-        </Col>
-      </Row>
     </Container>
   </Layout>
 )

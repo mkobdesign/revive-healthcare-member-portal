@@ -7,7 +7,6 @@ import Card from "react-bootstrap/Card"
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
-import { Link } from "gatsby";
 
 const Wellness = () => (
   <Layout>
@@ -43,26 +42,24 @@ const Wellness = () => (
                   <p className="big mb-4">
                     Our specially trained representatives will match you with the right counselor for your specific mental Wellness needs. 
                   </p>
-                  <Col md={12} className="text-right text-link">
-                    <Link to="/install">
-                      Call 1-888-888-8888 to Schedule
-                    </Link>
+                  <Col md={12} className="text-right">
+                    <a href="tel:18443905052" class="text-link">
+                      Call 1-844-390-5052 to Schedule
+                    </a>
                   </Col>
             </Col>
       </Row>
       
       <Row className="mb-8 revive-light-blue-bg card-ish">
-
-      <Col md={8}>
-              
-      <h2>A little help for yourself</h2>
+        <Col md={8}>
+          <h2>A little help for yourself</h2>
               <Card.Text className="big mb-3">
-              Our self-help tools support you from the comfort of your home, or office, or anywhere else
+                Our self-help tools support you from the comfort of your home, or office, or anywhere else
               </Card.Text>
               <a href="https://myrevivehealth.medikeeper.com/accounts/v8/ReviveHealth/login" className="btn btn-light">
-                    Help Yourself
-                    </a>
-        </Col>
+                 Help Yourself
+               </a>
+          </Col>
         <Col md={4}>
           <Card.Img src="/images/reading2.svg" alt="Reading" />
         </Col>
@@ -78,7 +75,7 @@ const Wellness = () => (
         <Col md={8}>
           <Row className="mb-5">
             <Col md={2}>
-              <span className="step">1</span>
+              <span className="step float-right">1</span>
             </Col>
             <Col md={10}>
               <h4>Health Risk Assessment (HRA)</h4>
@@ -88,7 +85,7 @@ const Wellness = () => (
           </Row>
           <Row className="mb-5">
             <Col md={2}>
-              <span className="step">2</span>
+              <span className="step float-right">2</span>
             </Col>
             <Col md={10}>
               <h4>Biometrics</h4>
@@ -98,7 +95,7 @@ const Wellness = () => (
           </Row>
           <Row className="mb-5">
             <Col md={2}>
-              <span className="step">2</span>
+              <span className="step float-right">3</span>
             </Col>
             <Col md={10}>
               <h4>Talk to a Health Coach</h4>
@@ -109,6 +106,19 @@ const Wellness = () => (
         </Col>
       </Row>
 
+      <Row className="mb-8 revive-blue-bg card-ish">
+        <Col md={8}>
+          <h2 className="title text-white">Keep your wallet happy too</h2>
+          <p className="text-white">Savings on things you use every day, and things you need every once in a while. Something for everyone!</p>
+          <p className="text-white"><i>The ReviveMarketplace powered by BenefitHub</i></p>
+              <a href="https://myrevivehealth.medikeeper.com/accounts/v8/ReviveHealth/login" className="btn btn-secondary btn-lg">
+                 Start Saving Today
+               </a>
+          </Col>
+        <Col md={4}>
+          <Card.Img src="/images/bag-walk.svg" alt="Shop" />
+        </Col>
+      </Row>
     </Container>
   </Layout>
 );

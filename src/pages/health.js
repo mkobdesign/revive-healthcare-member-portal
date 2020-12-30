@@ -7,7 +7,6 @@ import Card from "react-bootstrap/Card"
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
-import { Link } from "gatsby";
 
 const Health = () => (
   <Layout>
@@ -27,8 +26,8 @@ const Health = () => (
                     <Card.Text className="mb-4">
                     Have a medical question? Ask one of our nurses for those non-urgent things that come up in life.
                     </Card.Text>
-                    <a href="tel:18888888888" target="_blank" rel="noreferrer" className="text-link">
-                    Call 1-888-888-8888 to Speak with a Nurse
+                    <a href="tel:18883358836" target="_blank" rel="noreferrer" className="text-link">
+                    Call 1-888-335-8836 to Speak with a Nurse
                     </a>
                   </Col>
                 </Row>
