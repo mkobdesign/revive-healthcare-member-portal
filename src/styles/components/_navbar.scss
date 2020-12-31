@@ -3,3 +3,11 @@
 .navbar-collapse {
   align-items: stretch;
 }
+.navbar {
+  padding: 3rem 0;
+}
+@include media-breakpoint-down(md) {
+  .navbar {
+    padding: 1rem;
+  }
+}

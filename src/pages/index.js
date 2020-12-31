@@ -27,7 +27,7 @@ const IndexPage = () => (
         </Col>
       </Row>
       <Row>
-        <Col md={12} lg={6}>
+        <Col md={12} lg={5}>
           <a href="https://myrevivehealth.sandbox.connectedcare.md/#/patient">
             <Card className="shadow-sm border-0 mb-5">
               <Card.Img src="/images/dr2.svg" alt="Dr" />
@@ -37,7 +37,7 @@ const IndexPage = () => (
             </Card>
             </a>
         </Col>
-        <Col md={12} lg={6}>
+        <Col md={12} lg={7}>
           <Link to="/wellness#counseling">
             <Card className="shadow-sm border-0 mb-5">
               <Card.Img src="/images/counselor.svg" alt="Counselor" />
@@ -47,7 +47,7 @@ const IndexPage = () => (
             </Card>
           </Link>
           <Row>
-        <Col sm={12} md={6}>
+        <Col xs={6}>
           <a href="https://main.d2b2s0fjal3vo7.amplifyapp.com/auth/login">
             <Card className="shadow-sm border-0 mb-5">
                 <Card.Img src="/images/drug.svg" alt="Counselor" />
@@ -57,7 +57,7 @@ const IndexPage = () => (
               </Card>
           </a>
         </Col>
-        <Col sm={12} md={6}>
+        <Col xs={6}>
           <a href="https://myrevive.benefithub.com/Account/Login?ReturnUrl=%2f">
             <Card className="shadow-sm border-0 mb-5">
                 <Card.Img src="/images/marketplace.svg" alt="Marketplace" />
