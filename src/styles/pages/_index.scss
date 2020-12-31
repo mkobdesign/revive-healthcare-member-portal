@@ -1,4 +1,9 @@
 /* Index SCSS */
 main {
-  padding: 10px;
+  padding: 2rem 0px 0px 20px;
+}
+@include media-breakpoint-down(md) {
+  main {
+    padding: 40px 0px 0px 0px;
+  }
 }

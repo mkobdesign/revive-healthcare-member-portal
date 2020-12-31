@@ -1,14 +1,7 @@
 /* Card Customzation SCSS */
 
 .card {
-  h1 {
-    font-weight: bold;
-    font-size: 3rem;
-  }
-
-  h2 {
-    font-size: 2.5rem;
-  }
+  border-radius: 24px;
 
   .card-body {
     padding: 1.75rem;
@@ -42,9 +35,29 @@
   padding: 32px;
 }
 .card-ish {
-  padding: 64px 32px;
-  border-radius: 0.25rem;
+  padding: 2.5rem 3.2rem;
+  border-radius: 24px;
 }
 .intro-card .card-img-overlay {
   padding: 80px;
+}
+
+.card-ish {
+  padding: 3rem 3.5rem;
+}
+.feature {
+  border-radius: 150px 0px 0px 0px;
+  padding: 4rem 5.5rem;
+  position: relative;
+
+  &:after {
+    display: block;
+    content: " ";
+    height: 100%;
+    width: 1000px;
+    position: absolute;
+    right: -1000px;
+    top: 0px;
+    background-color: $revive-blue;
+  }
 }

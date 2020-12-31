@@ -12,7 +12,7 @@ const Wellness = () => (
   <Layout>
     <SEO title="My Wellness" />
     <Container fluid>
-      <Row className="mb-5"> 
+      <Row className="mb-6"> 
         <Col xl={12} className="mb-5">
           <Card className="border-0">
                 <Card.Img src="/images/wellness-hero.png" alt="Wellness" />
@@ -32,7 +32,7 @@ const Wellness = () => (
         </Col>
       </Row>
 
-      <Row className="mb-5">
+      <Row className="mb-8">
         <a id="counseling" />
             <Col md={4}>
               <Card.Img src="/images/your-time.svg" alt="Card image" />
@@ -106,7 +106,7 @@ const Wellness = () => (
         </Col>
       </Row>
 
-      <Row className="mb-8 revive-blue-bg card-ish">
+      <Row className="revive-blue-bg card-ish feature">
         <Col md={8}>
           <h2 className="title text-white">Keep your wallet happy too</h2>
           <p className="text-white">Savings on things you use every day, and things you need every once in a while. Something for everyone!</p>
