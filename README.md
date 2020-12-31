@@ -1,6 +1,6 @@
 # revive-healthcare-member-portal
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/6f3b3291-ebb3-49e0-9daf-e12329e926d0/deploy-status)](https://app.netlify.com/sites/revivehealthcare/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/b51b6875-a92e-496b-ae64-44d8c43a8886/deploy-status)](https://app.netlify.com/sites/revivehealthcare/deploys)
 
 ## To contribute
 - Clone the repo
