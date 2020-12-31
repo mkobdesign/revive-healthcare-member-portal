@@ -109,8 +109,8 @@ const Wellness = () => (
       <Row className="revive-blue-bg card-ish feature">
         <Col md={8}>
           <h2 className="title text-white">Keep your wallet happy too</h2>
-          <p className="text-white">Savings on things you use every day, and things you need every once in a while. Something for everyone!</p>
-          <p className="text-white"><i>The ReviveMarketplace powered by BenefitHub</i></p>
+          <p className="text-white mb-2">Savings on things you use every day, and things you need every once in a while. Something for everyone!</p>
+          <p className="text-white mb-5"><i>The ReviveMarketplace powered by BenefitHub</i></p>
               <a href="https://myrevivehealth.medikeeper.com/accounts/v8/ReviveHealth/login" className="btn btn-secondary btn-lg">
                  Start Saving Today
                </a>
