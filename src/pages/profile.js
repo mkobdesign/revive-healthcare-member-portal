@@ -1,4 +1,5 @@
 import React from "react";
+import { navigate } from "gatsby";
 import { useAuth0 } from "@auth0/auth0-react";
 
 const Profile = () => {
@@ -6,6 +7,11 @@ const Profile = () => {
 
   if (isLoading) {
     return <div>Loading ...</div>;
+  }
+
+  if(!isAuthenticated) {
+    navigate("/login");
+    return null;
   }
 
   return (
