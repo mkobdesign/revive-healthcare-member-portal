@@ -1,16 +1,33 @@
-import React from "react"
-import { Link } from "gatsby";
+import React, { useEffect } from "react";
+import { Link, navigate } from "gatsby";
 
-import Container from "react-bootstrap/Container"
-import Row from "react-bootstrap/Row"
-import Col from "react-bootstrap/Col"
-import Card from "react-bootstrap/Card"
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import Card from "react-bootstrap/Card";
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Layout from "../components/layout";
+import SEO from "../components/seo";
+import { useAuth0 } from "@auth0/auth0-react";
 
-const IndexPage = () => (
-  <Layout>
+const IndexPage = () => {
+  const { user, isAuthenticated, isLoading } = useAuth0();
+
+  useEffect(()=>{
+    if(!isAuthenticated) {
+      navigate("/login");
+      return null;
+    }
+  },[isAuthenticated]);
+
+  if (isLoading) {
+    return <div>Loading ...</div>;
+  }
+
+  
+
+  return (
+    <Layout>
     <SEO title="Home" />
     <Container fluid>
       <Row>
@@ -72,6 +89,7 @@ const IndexPage = () => (
       </Row>
     </Container>
   </Layout>
-)
+  );
+};
 
 export default IndexPage

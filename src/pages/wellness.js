@@ -1,15 +1,30 @@
-import React from "react";
+import React, { useEffect } from "react";
 
+import { navigate } from "gatsby";
+import { useAuth0 } from "@auth0/auth0-react";
 import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row"
-import Col from "react-bootstrap/Col"
-import Card from "react-bootstrap/Card"
-
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import Card from "react-bootstrap/Card";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 
-const Wellness = () => (
-  <Layout>
+const Wellness = () => {
+  const { isAuthenticated, isLoading } = useAuth0();
+
+  useEffect(()=>{
+		if(!isAuthenticated) {
+			navigate("/login");
+			return null;
+		}
+  },[isAuthenticated]);
+  
+  if (isLoading) {
+    return <div>Loading ...</div>;
+  }
+
+  return (
+    <Layout>
     <SEO title="My Wellness" />
     <Container fluid>
       <Row className="mb-6"> 
@@ -122,6 +137,6 @@ const Wellness = () => (
       </Row>
     </Container>
   </Layout>
-);
-
+  );
+};
 export default Wellness;

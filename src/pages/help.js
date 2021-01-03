@@ -1,16 +1,29 @@
-import React from "react";
-
+import React, { useEffect } from "react";
+import { navigate } from "gatsby";
 import Container from "react-bootstrap/Container";
-
 import Layout from "../components/layout";
-import Row from "react-bootstrap/Row"
-import Col from "react-bootstrap/Col"
-import Card from "react-bootstrap/Card"
-
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import Card from "react-bootstrap/Card";
 import SEO from "../components/seo";
+import { useAuth0 } from "@auth0/auth0-react";
 
-const Help = () => (
-  <Layout>
+const Help = () => {
+  const { isAuthenticated, isLoading } = useAuth0();
+
+  useEffect(()=>{
+		if(!isAuthenticated) {
+			navigate("/login");
+			return null;
+		}
+	},[isAuthenticated]);
+
+  if (isLoading) {
+    return <div>Loading ...</div>;
+  }
+
+  return (
+    <Layout>
     <SEO title="Help" />
     <Container>
        <Row className="mb-5"> 
@@ -67,6 +80,7 @@ const Help = () => (
       </Row>
     </Container>
   </Layout>
-);
+  );
+};
 
 export default Help;

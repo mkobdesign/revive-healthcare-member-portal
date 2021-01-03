@@ -1,5 +1,5 @@
-import React from "react";
-
+import React, { useEffect } from "react";
+import { navigate } from "gatsby";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row"
 import Col from "react-bootstrap/Col"
@@ -8,8 +8,25 @@ import Card from "react-bootstrap/Card"
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 
-const Health = () => (
-  <Layout>
+import { useAuth0 } from "@auth0/auth0-react";
+
+
+const Health = () => {
+	const { isAuthenticated, isLoading } = useAuth0();
+
+	useEffect(()=>{
+		if(!isAuthenticated) {
+			navigate("/login");
+			return null;
+		}
+	},[isAuthenticated]);
+
+	if (isLoading) {
+		return <div>Loading ...</div>;
+	}	
+	
+	return (
+	  <Layout>
     <SEO title="Health" />
     <Container fluid>
       <Row className="mb-5"> 
@@ -99,6 +116,6 @@ const Health = () => (
 
     </Container>
   </Layout>
-);
-
+	);
+};
 export default Health;
