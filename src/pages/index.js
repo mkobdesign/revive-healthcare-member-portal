@@ -35,7 +35,7 @@ const IndexPage = () => {
           <Card className="revive-blue-bg image-below-card intro-card border-0">
             <Card.Img src="/images/countryside.svg" alt="Card image" />
                 <Card.ImgOverlay>
-                  <h2>Good morning, Ryan</h2>
+                  <h2>Good morning, {user?.name}</h2>
                   <Card.Text>
                     What would you like to do today?
                   </Card.Text>
