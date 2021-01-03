@@ -37,10 +37,10 @@ const Health = () => (
       </Row>
 
       <Row className="mb-8">
-            <Col md={4}>
+            <Col md={4} className="my-auto">
               <Card.Img src="/images/doctor.svg" alt="Doctor" />
             </Col>
-            <Col md={8}>
+            <Col md={8} className="my-auto">
                   <h2>See a Doctor, Anywhere </h2>
                   <Card.Text className="big mb-3">
                   Schedule a virtual visit with a doctor wherever life takes you. Virtual visits give you the flexibility to see a doctor when you need it most.
@@ -52,7 +52,7 @@ const Health = () => (
       </Row>
 
       <Row className="mb-8">
-            <Col md={8}>
+            <Col md={8} className="my-auto">
                   <h2>Your Prescriptions. Now.</h2>
                   <Card.Text className="big mb-3">
                   Fast and easy access to your prescriptions, delivered right to your door.
@@ -61,13 +61,13 @@ const Health = () => (
                       Check your Prescriptions
                     </a>
             </Col>
-            <Col md={4}>
+            <Col md={4} className="my-auto">
               <Card.Img src="/images/dr-color.svg" alt="Doctor" />
             </Col>
       </Row>
 
       <Row className="mb-8 revive-light-blue-bg card-ish">
-            <Col md={8}>
+            <Col md={8} className="my-auto">
               
                   <h2>Stay Informed</h2>
                   <Card.Text className="big mb-3">
@@ -77,16 +77,16 @@ const Health = () => (
                       Browse Library
                     </a>
             </Col>
-            <Col md={4}>
+            <Col md={4} className="my-auto">
               <Card.Img src="/images/graphic-reading.svg" alt="Reading" />
             </Col>
       </Row>
 
       <Row className="mb-5">
-            <Col md={4}>
+            <Col md={4} className="my-auto">
               <Card.Img src="/images/medicine.svg" alt="Doctor" />
             </Col>
-            <Col md={8}>
+            <Col md={8} className="my-auto">
                   <h2>Need Some Blood work?</h2>
                   <Card.Text className="big mb-3">
                     Order an at home kit, or go in to have your blood sample taken. Your choice!

@@ -17,16 +17,17 @@ const Wellness = () => (
           <Card className="border-0">
                 <Card.Img src="/images/wellness-hero.png" alt="Wellness" />
                 <Card.ImgOverlay>
-                  <Card.Text className="subtitle-caps">
-                  MY WELLNESS
-                </Card.Text>
-                    <h1>Wellness from the inside, out</h1>
-                    <Card.Text className="mb-4">
-                      Access to your wellness benefits in one easy click.
+                  
+                      <Card.Text className="subtitle-caps">
+                      MY WELLNESS
                     </Card.Text>
-                    <a href="https://myrevivehealth.medikeeper.com/accounts/v8/ReviveHealth/login" className="btn btn-primary btn-lg">
-                      Take your Assessment
-                    </a>
+                        <h1>Wellness from the inside, out</h1>
+                        <Card.Text className="mb-4">
+                          Access to your wellness benefits in one easy click.
+                        </Card.Text>
+                        <a href="https://myrevivehealth.medikeeper.com/accounts/v8/ReviveHealth/login" className="btn btn-primary btn-lg">
+                          Take your Assessment
+                        </a>
                 </Card.ImgOverlay>
           </Card>
         </Col>
@@ -34,10 +35,10 @@ const Wellness = () => (
 
       <Row className="mb-8">
         <a id="counseling" />
-            <Col md={4}>
+            <Col md={4} className="my-auto">
               <Card.Img src="/images/your-time.svg" alt="Card image" />
             </Col>
-            <Col md={8}>
+            <Col md={8} className="my-auto">
                   <h2>Counseling on Your Time</h2>
                   <p className="big mb-4">
                     Our specially trained representatives will match you with the right counselor for your specific mental Wellness needs. 
@@ -46,12 +47,12 @@ const Wellness = () => (
                     <a href="tel:18443905052" class="text-link">
                       Call 1-844-390-5052 to Schedule
                     </a>
-                  </Col>
+                </Col>
             </Col>
       </Row>
       
       <Row className="mb-8 revive-light-blue-bg card-ish">
-        <Col md={8}>
+        <Col md={8} className="my-auto">
           <h2>A little help for yourself</h2>
               <Card.Text className="big mb-3">
                 Our self-help tools support you from the comfort of your home, or office, or anywhere else
@@ -60,7 +61,7 @@ const Wellness = () => (
                  Help Yourself
                </a>
           </Col>
-        <Col md={4}>
+        <Col md={4} className="my-auto">
           <Card.Img src="/images/reading2.svg" alt="Reading" />
         </Col>
       </Row>
@@ -116,7 +117,7 @@ const Wellness = () => (
                </a>
           </Col>
         <Col md={4}>
-          <Card.Img src="/images/bag-walk.svg" alt="Shop" />
+          <Card.Img src="/images/shopping-lady.png" alt="Woman with Shopping Bags" className="align-bottom"/>
         </Col>
       </Row>
     </Container>
