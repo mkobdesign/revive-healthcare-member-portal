@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link, navigate } from "gatsby";
 
 import Container from "react-bootstrap/Container";
@@ -13,14 +13,18 @@ import { useAuth0 } from "@auth0/auth0-react";
 const IndexPage = () => {
   const { user, isAuthenticated, isLoading } = useAuth0();
 
+  useEffect(()=>{
+    if(!isAuthenticated) {
+      navigate("/login");
+      return null;
+    }
+  },[isAuthenticated]);
+
   if (isLoading) {
     return <div>Loading ...</div>;
   }
 
-  if(!isAuthenticated) {
-    navigate("/login");
-    return null;
-  }
+  
 
   return (
     <Layout>

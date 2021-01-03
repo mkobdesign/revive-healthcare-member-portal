@@ -9,10 +9,12 @@ const onRedirectCallback = appState =>
 export const wrapRootElement = ({ element }, pluginOptions) => {
     return ( 
 		<Auth0Provider
-		  domain={configData.GATSBY_AUTH_DOMAIN}
-		  clientId={configData.GATSBY_AUTH_CLIENT_ID}
-		  redirectUri={window.location.origin}
-		  onRedirectCallback={onRedirectCallback}
+			domain={configData.GATSBY_AUTH_DOMAIN}
+			clientId={configData.GATSBY_AUTH_CLIENT_ID}
+			redirectUri={window.location.origin}
+			onRedirectCallback={onRedirectCallback}
+			useRefreshTokens={true}
+  			cacheLocation="localstorage"
 		>
 		  {element}
 		</Auth0Provider>

@@ -1,17 +1,20 @@
-import React from "react"
+import React, { useEffect } from "react"
 import { Link, navigate } from "gatsby";
 import { useAuth0 } from "@auth0/auth0-react"
 
 const Account = () => {
   const { isAuthenticated, loading, logout, user, loginWithPopup } = useAuth0()
+  
+  useEffect(()=> {
+    if(isAuthenticated) {
+      navigate("/");
+      return null;
+    }
+  }, [isAuthenticated]);
+  
   if (loading) {
     return <p>Loading...</p>
-  }
-
-  if(isAuthenticated) {
-		navigate("/");
-		return null;
-	}
+  }   
 
   return (
     <div>
@@ -27,7 +30,6 @@ const Account = () => {
 		  </Link>
           <button onClick={() => logout()}>Log out</button>
           <p>Check out the user data supplied by Auth0, below:</p>
-          <pre>{isAuthenticated && JSON.stringify(user, null, 2)}</pre>
         </>
       ) : (
         <>
