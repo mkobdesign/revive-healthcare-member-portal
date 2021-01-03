@@ -1,10 +1,10 @@
 @font-face {
   font-family: "Karla";
-  src: url("/fonts/Karla-Regular.ttf");
+  src: url("Karla-Regular.ttf") format("ttf");
 }
 
 @font-face {
-  font-family: Boston-Bold;
+  font-family: "Boston-Bold";
   font-weight: 800;
   font-style: normal;
   src: url("BostonBold.otf") format("otf");
@@ -13,5 +13,5 @@
 
 @font-face {
   font-family: "Boston-Semibold";
-  src: url("../fonts/BostonSemibold.otf");
+  src: url("BostonSemibold.otf") format("otf");
 }
