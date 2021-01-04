@@ -62,12 +62,14 @@ const Sidebar = ({ siteTitle }) => {
                 </Link>
               </li>
             </ul>
-              <ul className="nav align-bottom d-flex justify-content-end text-right">
+              <ul className="nav d-flex text-right mt-auto align-items-end">
                 <li className="nav-item">
                   <Link to="/help" className="nav-link" activeClassName="active-link">
                     <img src="./images/icons/help-circle.svg" alt="" width="24" height="24" title="Dashboard" />
                     Help
                   </Link>
+                </li>
+                <li className="nav-item">
                   <a href="#logout" className="nav-link" onClick={() =>logout()}>
                     <img src="./images/icons/log-out.svg" alt="" width="24" height="24" title="Dashboard" />
                     Log Out
