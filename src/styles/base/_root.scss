@@ -1,23 +1,36 @@
 /* Globals */
+@import "/static/fonts.css";
+
 html,
 body {
   position: relative;
-
   min-height: 100vh;
-
+  font-family: "Karla", helvetica, sans-serif;
   overflow-x: hidden !important;
-
-  font-family: "Roboto", sans-serif;
-
   background-color: $white;
-
   -webkit-font-smoothing: antialiased !important;
   -moz-osx-font-smoothing: grayscale !important;
-
   text-rendering: optimizeLegibility !important;
   -webkit-text-stroke: 0.025em rgba(51, 51, 51, 0.05);
 }
-
+h1 {
+  font-family: "Boston-Bold", helvetica, sans-serif;
+}
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Boston-Semibold", helvetica, sans-serif;
+  font-weight: 600;
+}
+.subtitle-caps {
+  font-family: "Boston-Semibold";
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 300;
+  text-transform: uppercase;
+}
 img {
   max-width: 100%;
 }
@@ -33,6 +46,15 @@ a.text-link {
 
 .flex-1 {
   flex: 1;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.5rem;
 }
 
 p {
@@ -69,10 +91,10 @@ img {
 
   background: black;
 }
+
 .revive-blue-bg {
   background-color: $revive-blue;
 }
-
 .revive-light-blue-bg {
   background-color: $revive-light-blue;
 }
@@ -94,12 +116,39 @@ img {
 .mb-9 {
   margin-bottom: 9rem !important;
 }
+.mw-300 {
+  max-width: 300px;
+}
+
+.row-no-padding {
+  [class*="col-"] {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+
+.row-no-padding > [class*="col-"] {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
 
 @include media-breakpoint-down(md) {
-  .main-content {
-    padding-top: 90px;
-  }
   .mw-250 {
     max-width: 100%;
+  }
+  .flex-row-md {
+    flex-direction: row !important;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+  h2 {
+    font-size: 1.2rem;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+  p {
+    font-size: 0.75rem;
   }
 }

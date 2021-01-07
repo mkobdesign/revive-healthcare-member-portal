@@ -33,8 +33,11 @@ const Layout = ({ children }) => (
     render={(data) => (
       <>
         <Container fluid className="sitewrap">
-          <Row>
+          <Row noGutters>
             <Sidebar siteTitle={data.site.siteMetadata.title} />
+          </Row>
+          
+          <Row>
             <Col className="col-md-9 ml-sm-auto col-lg-9 px-4 main-content">
               <main>{children}</main>
             </Col>

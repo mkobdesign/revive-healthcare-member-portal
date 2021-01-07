@@ -14,7 +14,7 @@ class Feature extends Component (subtitle, title, buttontext, link) {
                 {this.subtitle}
               </Card.Text>
               <h2>{this.title}</h2>
-              <a href={this.link} class="btn btn-secondary">{this.buttontext}</a>
+              <a href={this.link} className="btn btn-secondary">{this.buttontext}</a>
             </Card.ImgOverlay>
           </Card>
         </Col>

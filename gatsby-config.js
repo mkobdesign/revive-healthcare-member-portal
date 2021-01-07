@@ -14,6 +14,15 @@ module.exports = {
         path: `${__dirname}/static/images`,
       },
     },
+    {
+      resolve: "gatsby-plugin-web-font-loader",
+      options: {
+        custom: {
+          families: ["Boston-Bold, Boston-Semibold, Karla"],
+          urls: ["/fonts/fonts.css"],
+        },
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {

@@ -13,13 +13,17 @@
 
   .navbar-brand {
     margin-bottom: 80px;
+    padding-right: 2rem;
   }
   .nav-item {
     padding: 10px 0px;
+    display: block;
+    width: 100%;
+    text-align: right;
   }
   .navbar {
     flex-direction: column;
-    align-items: start;
+    align-items: flex-end;
     display: flex;
   }
   ul.nav {
@@ -28,7 +32,8 @@
   a.nav-link {
     color: $revive-black;
     font-size: 22px;
-    padding: 0.5rem 1rem 0.5rem 0;
+    padding: 0.5rem 3rem 0.5rem 0;
+    border-right: 8px solid transparent;
 
     img {
       filter: brightness(0%);
@@ -41,10 +46,19 @@
 }
 a.nav-link.active-link {
   color: $revive-blue;
+  border-right: 8px solid $revive-blue;
 
   img {
     filter: brightness(100%);
   }
+  // &:after {
+  //   display: block;
+  //   content: " ";
+  //   background-image: url("/active-indicator.svg");
+  //   background-size: 28px 28px;
+  //   height: 28px;
+  //   width: 28px;
+  // }
 }
 .navbar-dark .navbar-nav .nav-link {
   color: $font-grey;
@@ -60,10 +74,14 @@ a.nav-link.active-link {
 
 @include media-breakpoint-down(md) {
   .sidebar {
-    height: 90px;
+    height: fit-content;
 
     a.nav-link {
       font-size: 17px;
+    }
+
+    .navbar-brand {
+      margin: 10px;
     }
   }
 }
