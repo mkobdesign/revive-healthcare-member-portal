@@ -108,7 +108,7 @@ const Health = () => {
                   <Card.Text className="big mb-3">
                   Access our library to learn more about various health conditions.
                   </Card.Text>
-                    <a href="https://www.wellrx.com/member/login/" className="btn btn-light">
+                    <a href="https://www.wellRxpremier.com/Revive" className="btn btn-light">
                       Browse Library
                     </a>
             </Col>

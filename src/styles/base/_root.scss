@@ -167,6 +167,9 @@ img {
   }
 }
 @include media-breakpoint-down(sm) {
+  .flex-row-sm {
+    flex-direction: row !important;
+  }
   p {
     font-size: 0.98rem;
   }
