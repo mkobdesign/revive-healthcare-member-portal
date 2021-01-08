@@ -51,8 +51,8 @@ const Health = () => {
               </Card.ImgOverlay>
           </Card>
         </Col>
+        
         <Row className="d-sm-block d-md-block d-lg-none">
-
           <Col md={12} className="my-auto">
               <Card.Img src="/images/health-mobile-hero.jpg" alt="Woman on Computer" className="mb-3" />
             </Col>
@@ -71,7 +71,6 @@ const Health = () => {
 
       <Row className="mb-8">
             <Col md={4} className="my-auto">
-<<<<<<< HEAD
             <h2 className="d-none d-sm-block d-md-none d-lg-none mb-5">See a Doctor, Anywhere </h2>
               <Card.Img src="/images/doctor.svg" alt="Doctor" />
             </Col>
@@ -81,16 +80,6 @@ const Health = () => {
                   Schedule a virtual visit with a doctor wherever life takes you. Virtual visits give you the flexibility to see a doctor when you need it most.
                   </Card.Text>
                   <a href="https://myrevivehealth.sandbox.connectedcare.md/#/patient" className="btn btn-outline-info float-right d-sm-block-only float-sm-none-only">
-=======
-              <Card.Img src="/images/doctor.svg" alt="Doctor" />
-            </Col>
-            <Col md={8} className="my-auto">
-                  <h2>See a Doctor, Anywhere </h2>
-                  <Card.Text className="big mb-3">
-                  Schedule a virtual visit with a doctor wherever life takes you. Virtual visits give you the flexibility to see a doctor when you need it most.
-                  </Card.Text>
-                  <a href="https://myrevivehealth.sandbox.connectedcare.md/#/patient" className="btn btn-outline-info float-right">
->>>>>>> 051bec7e2c5353d0cea9aa3ca503be681cea043b
                       Schedule a Virtual Visit
                     </a>
             </Col>
@@ -98,29 +87,17 @@ const Health = () => {
 
       <Row className="mb-8">
             <Col md={8} className="my-auto">
-<<<<<<< HEAD
                   <h2>Refill your prescriptions. Now.</h2>
                   <Card.Img className="d-none d-sm-block d-md-none d-lg-none mt-5 mb-3" src="/images/dr-color.svg" alt="Doctor" />
                   <Card.Text className="big mb-3">
                   Fast and easy access to your prescriptions, delivered right to your door.
                   </Card.Text>
                   <a href="https://main.d2b2s0fjal3vo7.amplifyapp.com/auth/login" className="btn btn-outline-info d-sm-block-only">
-=======
-                  <h2>Your Prescriptions. Now.</h2>
-                  <Card.Text className="big mb-3">
-                  Fast and easy access to your prescriptions, delivered right to your door.
-                  </Card.Text>
-                  <a href="https://main.d2b2s0fjal3vo7.amplifyapp.com/auth/login" className="btn btn-outline-info">
->>>>>>> 051bec7e2c5353d0cea9aa3ca503be681cea043b
                       Check your Prescriptions
                     </a>
             </Col>
             <Col md={4} className="my-auto">
-<<<<<<< HEAD
               <Card.Img className="d-none d-sm-none d-md-block d-lg-block" src="/images/dr-color.svg" alt="Doctor" />
-=======
-              <Card.Img src="/images/dr-color.svg" alt="Doctor" />
->>>>>>> 051bec7e2c5353d0cea9aa3ca503be681cea043b
             </Col>
       </Row>
 
@@ -135,11 +112,7 @@ const Health = () => {
                       Browse Library
                     </a>
             </Col>
-<<<<<<< HEAD
             <Col md={4} className="my-auto floaty-img-right">
-=======
-            <Col md={4} className="my-auto">
->>>>>>> 051bec7e2c5353d0cea9aa3ca503be681cea043b
               <Card.Img src="/images/graphic-reading.svg" alt="Reading" />
             </Col>
       </Row>
@@ -153,11 +126,7 @@ const Health = () => {
                   <Card.Text className="big mb-3">
                     Order an at home kit, or go in to have your blood sample taken. Your choice!
                   </Card.Text>
-<<<<<<< HEAD
                   <a href="https://www.wellconnectplus.com/?company=XEG808" className="btn btn-outline-info float-right d-sm-block-only float-sm-none-only">
-=======
-                  <a href="https://www.wellconnectplus.com/?company=XEG808" className="btn btn-outline-info float-right">
->>>>>>> 051bec7e2c5353d0cea9aa3ca503be681cea043b
                       Get your Blood work
                     </a>
             </Col>
