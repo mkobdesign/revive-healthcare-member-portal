@@ -138,6 +138,14 @@ img {
   p {
     font-size: 0.98rem;
   }
+}
+
+.row-no-padding > [class*="col-"] {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+@include media-breakpoint-down(md) {
   .mw-250 {
     max-width: 100%;
   }
