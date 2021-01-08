@@ -31,7 +31,7 @@ const Layout = ({ children }) => (
       }
     `}
     render={(data) => (
-      <>
+      <div className="wholesite">
         <Container fluid className="sitewrap">
           <Row noGutters>
             <Sidebar siteTitle={data.site.siteMetadata.title} />
@@ -43,7 +43,7 @@ const Layout = ({ children }) => (
             </Col>
           </Row>
         </Container>
-      </>
+      </div>
     )}
   />
 );

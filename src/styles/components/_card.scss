@@ -54,3 +54,45 @@
     background-color: $revive-blue;
   }
 }
+
+@include media-breakpoint-down(md) {
+  .card-img-overlay {
+    padding: 16px;
+  }
+  .card.image-below-card img.card-img {
+    margin-bottom: -20px;
+  }
+  .taller-mobile-1 .card-img {
+    margin-top: 1rem;
+  }
+  .taller-mobile-2 .card-img {
+    margin-top: 2rem;
+  }
+  .taller-mobile-3 .card-img {
+    margin-top: 3rem;
+  }
+  .taller-mobile-4 .card-img {
+    margin-top: 4rem;
+  }
+  .intro-card .card-img-overlay {
+    padding: 25px;
+  }
+  .card-ish {
+    padding: 2rem 2.5rem;
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .card-ish {
+    padding: 1.5rem 1.85rem;
+  }
+  .floaty-img-right {
+    position: relative;
+    img {
+      max-width: 44%;
+      right: -50%;
+      position: relative;
+      top: -20px;
+    }
+  }
+}

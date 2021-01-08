@@ -27,7 +27,7 @@
     display: flex;
   }
   ul.nav {
-    flex: 1;
+    flex: 0 0 auto;
   }
   a.nav-link {
     color: $revive-black;
@@ -73,15 +73,23 @@ a.nav-link.active-link {
 }
 
 @include media-breakpoint-down(md) {
+  .sidebar a.nav-link {
+    font-size: 17px;
+    padding: 0.5rem 2rem 0.5rem 0;
+  }
+  .navbar-brand {
+    margin: 10px;
+  }
+}
+
+@include media-breakpoint-down(sm) {
   .sidebar {
     height: fit-content;
-
-    a.nav-link {
-      font-size: 17px;
-    }
-
-    .navbar-brand {
-      margin: 10px;
-    }
+  }
+  .sidebar .navbar {
+    align-items: center;
+  }
+  .sidebar .navbar-brand {
+    margin-bottom: 10px;
   }
 }
