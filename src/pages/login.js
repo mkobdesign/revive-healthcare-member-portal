@@ -3,7 +3,7 @@ import { Link, navigate } from "gatsby";
 import { useAuth0 } from "@auth0/auth0-react"
 
 const Account = () => {
-  const { isAuthenticated, loading, logout, user, loginWithPopup } = useAuth0()
+  const { isAuthenticated, loading, logout, user, loginWithRedirect } = useAuth0()
   
   useEffect(()=> {
     if(isAuthenticated) {
@@ -34,7 +34,7 @@ const Account = () => {
       ) : (
         <>
           <h2>Hi, try logging in:</h2>
-          <button onClick={() => loginWithPopup()}>Log in</button>
+          <button onClick={() => loginWithRedirect({redirect_uri: window.location.origin})}>Log in</button>
           <pre>{isAuthenticated && JSON.stringify(user, null, 2)}</pre>
         </>
       )}
