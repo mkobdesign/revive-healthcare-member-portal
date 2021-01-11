@@ -37,8 +37,8 @@ const Account = () => {
       ) : (
         <>
           <h2>Hi, try logging in:</h2>
-          <button onClick={() => loginWithPopup()}>Log in</button>
-          <pre>{isAuthenticated && JSON.stringify(user, null, 2)}</pre>
+          {/* <button onClick={() => loginWithPopup()}>Log in</button>
+          <pre>{isAuthenticated && JSON.stringify(user, null, 2)}</pre> */}
         </>
       )}
     </div>
