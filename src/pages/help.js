@@ -31,7 +31,7 @@ const Help = () => {
             <Card.Text className="subtitle-caps">
               Help
             </Card.Text>
-            <h1>Got Questions? We Got Answers</h1>
+            <h1>Got Questions? We Got Answers.</h1>
             <Card.Text className="mb-4">
               Our customer service team is available to help 24/7, and we will get back to you as quickly as possible.
             </Card.Text>
