@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import { navigate } from "gatsby";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row"
 import Col from "react-bootstrap/Col"
@@ -12,18 +11,18 @@ import { useAuth0 } from "@auth0/auth0-react";
 
 
 const Health = () => {
-	const { isAuthenticated, isLoading } = useAuth0();
+	const { isAuthenticated, isLoading, loginWithRedirect } = useAuth0();
 
 	useEffect(()=>{
-		if(!isAuthenticated) {
-			navigate("/login");
-			return null;
-		}
-	},[isAuthenticated]);
-
-	if (isLoading) {
+		if (isLoading) {
 		return <div>Loading ...</div>;
-	}	
+		}
+
+		if(!isAuthenticated) {
+		loginWithRedirect();
+		return null;
+		}
+	},[isAuthenticated, isLoading, loginWithRedirect ]);	
 	
 	return (
 	  <Layout>

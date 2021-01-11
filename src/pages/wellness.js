@@ -1,6 +1,4 @@
 import React, { useEffect } from "react";
-
-import { navigate } from "gatsby";
 import { useAuth0 } from "@auth0/auth0-react";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
@@ -10,18 +8,18 @@ import Layout from "../components/layout";
 import SEO from "../components/seo";
 
 const Wellness = () => {
-  const { isAuthenticated, isLoading } = useAuth0();
+  const { isAuthenticated, isLoading, loginWithRedirect } = useAuth0();
 
   useEffect(()=>{
-		if(!isAuthenticated) {
-			navigate("/login");
-			return null;
-		}
-  },[isAuthenticated]);
-  
-  if (isLoading) {
-    return <div>Loading ...</div>;
-  }
+    if (isLoading) {
+      return <div>Loading ...</div>;
+    }
+
+    if(!isAuthenticated) {
+      loginWithRedirect();
+      return null;
+    }
+  },[isAuthenticated, isLoading, loginWithRedirect ]);
 
   return (
     <Layout>
@@ -113,7 +111,7 @@ const Wellness = () => {
             <Col md={10}>
               <h4>Health Risk Assessment (HRA)</h4>
               <p className="mb-3">Take our HRA to better understand where you are at in your health journey. </p>
-              <a href="https://myrevivehealth.medikeeper.com/accounts/v8/ReviveHealth/login" className="text-link text-right">Take the HRA ></a>
+              <a href="https://myrevivehealth.medikeeper.com/accounts/v8/ReviveHealth/login" className="text-link text-right">Take the HRA &gt;</a>
             </Col>
           </Row>
           <Row className="mb-5">
@@ -123,7 +121,7 @@ const Wellness = () => {
             <Col md={10}>
               <h4>Biometrics</h4>
               <p className="mb-3">Your height, weight, waist circumference and some basic blood work help evaluate your overall health and will help your health coach craft a plan just for you.</p>
-              <a href="https://www.wellconnectplus.com/?company=XEG808" className="text-link text-right">Get your Biometrics ></a>
+              <a href="https://www.wellconnectplus.com/?company=XEG808" className="text-link text-right">Get your Biometrics &gt;</a>
             </Col>
           </Row>
           <Row className="mb-5">
@@ -133,7 +131,7 @@ const Wellness = () => {
             <Col md={10}>
               <h4>Talk to a Health Coach</h4>
               <p className="mb-3">Get an expert involved to help you understand your HRA and biometric results. A health coach is the perfect addition to take your journey to the next level.</p>
-              <a href="https://www.wellconnectplus.com/?company=XEG808" className="text-link text-right">Schedule a Session with a Health Coach ></a>
+              <a href="https://www.wellconnectplus.com/?company=XEG808" className="text-link text-right">Schedule a Session with a Health Coach &gt;</a>
             </Col>
           </Row>
         </Col>

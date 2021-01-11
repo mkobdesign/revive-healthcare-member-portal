@@ -1,20 +1,19 @@
 import React, { useEffect } from "react";
-import { navigate } from "gatsby";
 import { useAuth0 } from "@auth0/auth0-react";
 
 const Profile = () => {
-  const { user, isAuthenticated, isLoading, logout } = useAuth0();
+  const { user, isAuthenticated, isLoading, loginWithRedirect, logout } = useAuth0();
 
   useEffect(()=>{
+    if (isLoading) {
+      return <div>Loading ...</div>;
+    }
+
     if(!isAuthenticated) {
-      navigate("/login");
+      loginWithRedirect();
       return null;
     }
-  },[isAuthenticated]);
-
-  if (isLoading) {
-    return <div>Loading ...</div>;
-  }  
+  },[isAuthenticated, isLoading, loginWithRedirect ]);
 
   return (
     isAuthenticated && (
