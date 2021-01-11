@@ -30,7 +30,6 @@ const Wellness = () => {
           <Card className="border-0">
                 <Card.Img src="/images/wellness-hero.png" alt="Wellness" />
                 <Card.ImgOverlay>
-                  
                       <Card.Text className="subtitle-caps">
                       MY WELLNESS
                     </Card.Text>

@@ -34,7 +34,7 @@ const IndexPage = () => {
             <Card.Img src="/images/countryside.svg" className="d-sm-none d-md-none d-lg-block" alt="Card image" />
             <Card.Img src="/images/welcome-hero-mobile.svg" className="d-sm-block d-md-block d-lg-none" alt="Card image" />
                 <Card.ImgOverlay>
-                  <h2>Good morning, {user?.name}</h2>
+                  <h2>Good morning, {user?.firstName}</h2>
                   <Card.Text>
                     What would you like to do today?
                   </Card.Text>
@@ -98,7 +98,7 @@ const IndexPage = () => {
           </a>
         </Col>
       </Row>
-        </Col>
+      </Col>
       </Row>
     </Container>
   </Layout>

@@ -42,9 +42,9 @@ const Health = () => {
                     <Card.Text className="mb-4">
                     Have a medical question? Ask one of our nurses for those non-urgent things that come up in life.
                     </Card.Text>
-                    <a href="tel:18883358836" target="_blank" rel="noreferrer" className="text-link">
+                    <span className="text-link">
                     Call 1-888-335-8836 to Speak with a Nurse
-                    </a>
+                    </span >
                   </Col>
                 </Row>
               </Card.ImgOverlay>
@@ -61,9 +61,9 @@ const Health = () => {
                   <Card.Text className="mb-4">
                     Have a medical question? Ask one of our nurses for those non-urgent things that come up in life.
                     </Card.Text>
-                    <a href="tel:18883358836" target="_blank" rel="noreferrer" className="text-link">
+                    <span className="text-link">
                     Call 1-888-335-8836 to Speak with a Nurse
-                    </a>
+                    </span>
             </Col>
         </Row>
       </Row>
