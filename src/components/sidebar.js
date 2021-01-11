@@ -14,7 +14,7 @@ const Sidebar = ({ siteTitle }) => {
   
   return ( isAuthenticated && (
     <nav className="sidebar flex-column flex-row-md col-md-3 d-flex flex-column flex-1 row-no-gutters">
-        <Navbar collapseOnSelect expand="md" variant="light" className="d-flex flex-column flex-1 flex-row-md">
+        <Navbar collapseOnSelect expand="md" variant="light" className="d-flex flex-column flex-1 flex-row-sm">
           <Navbar.Brand href="/" className="justify-content-end">
               <img
               src={logo}

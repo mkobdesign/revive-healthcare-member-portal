@@ -6,7 +6,7 @@
 .navbar {
   padding: 3rem 0;
 }
-@include media-breakpoint-down(md) {
+@include media-breakpoint-down(sm) {
   .navbar {
     padding: 1rem;
   }

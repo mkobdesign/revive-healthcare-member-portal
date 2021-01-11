@@ -25,7 +25,7 @@ const Wellness = () => {
     <Layout>
     <SEO title="My Wellness" />
     <Container fluid>
-      <Row className="mb-6"> 
+      <Row className="mb-6 d-sm-none d-md-none d-lg-block"> 
         <Col xl={12} className="mb-5">
           <Card className="border-0">
                 <Card.Img src="/images/wellness-hero.png" alt="Wellness" />
@@ -46,15 +46,32 @@ const Wellness = () => {
         </Col>
       </Row>
 
+      <Row className="d-sm-block d-md-block d-lg-none mb-5">
+          <Col md={12} className="my-auto">
+          <Card.Img src="/images/wellness-hero-mobile.jpg" alt="Wellness" className="mb-3" />
+            </Col>
+
+            <Col md={12} className="my-auto">
+            <h1>Wellness from the inside, out</h1>
+              <Card.Text className="mb-4">
+                          Access to your wellness benefits in one easy click.
+                        </Card.Text>
+                        <a href="https://myrevivehealth.medikeeper.com/accounts/v8/ReviveHealth/login" className="btn btn-primary btn-lg">
+                          Take your Assessment
+                        </a>
+            </Col>
+        </Row>
+
       <Row className="mb-8">
-        <a id="counseling" />
+        <a id="counseling" href="/" className="d-none">Counseling</a>
+        <h2 className="d-sm-block d-md-block d-lg-none mb-5">Counseling on Your Time</h2>
             <Col md={4} className="my-auto">
               <Card.Img src="/images/your-time.svg" alt="Card image" />
             </Col>
             <Col md={8} className="my-auto">
-                  <h2>Counseling on Your Time</h2>
+                  <h2 className="mb-6 d-sm-none d-md-none d-lg-block">Counseling on Your Time</h2>
                   <p className="big mb-4">
-                    Our specially trained representatives will match you with the right counselor for your specific mental Wellness needs. 
+                    Our specially trained representatives will match you with the right counselor for your specific mental health needs. 
                   </p>
                   <Col md={12} className="text-right">
                     <a href="tel:18443905052" class="text-link">
@@ -125,7 +142,7 @@ const Wellness = () => {
           <h2 className="title text-white">Keep your wallet happy too</h2>
           <p className="text-white mb-2">Savings on things you use every day, and things you need every once in a while. Something for everyone!</p>
           <p className="text-white mb-5"><i>The ReviveMarketplace powered by BenefitHub</i></p>
-              <a href="https://myrevivehealth.medikeeper.com/accounts/v8/ReviveHealth/login" className="btn btn-secondary btn-lg">
+              <a href="https://myrevive.benefithub.com" className="btn btn-secondary btn-lg">
                  Start Saving Today
                </a>
           </Col>
