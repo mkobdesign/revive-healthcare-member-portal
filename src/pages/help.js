@@ -31,7 +31,7 @@ const Help = () => {
             <Card.Text className="subtitle-caps">
               Help
             </Card.Text>
-            <h1>Got Questions? We Got Answers</h1>
+            <h1>Got Questions? We Got Answers.</h1>
             <Card.Text className="mb-4">
             Our Reviver Success Team is available to help 24/7. If you prefer to contact us by email, we will get back to you as quickly as possible.
             </Card.Text>
