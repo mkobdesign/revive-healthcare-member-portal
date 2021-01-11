@@ -3,18 +3,21 @@ import { Link, navigate } from "gatsby";
 import { useAuth0 } from "@auth0/auth0-react"
 
 const Account = () => {
-  const { isAuthenticated, loading, logout, user, loginWithPopup } = useAuth0()
-  
-  useEffect(()=> {
-    if(isAuthenticated) {
+  const { isAuthenticated, isLoading, loginWithRedirect, logout } = useAuth0();
+
+  useEffect(()=>{
+    if (isLoading) {
+      return <div>Loading ...</div>;
+    }
+
+    if(!isAuthenticated) {
+      loginWithRedirect();
+      return null;
+    } else {
       navigate("/");
       return null;
     }
-  }, [isAuthenticated]);
-  
-  if (loading) {
-    return <p>Loading...</p>
-  }   
+  },[isAuthenticated, isLoading, loginWithRedirect ]);   
 
   return (
     <div>

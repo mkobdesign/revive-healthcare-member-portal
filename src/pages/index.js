@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Link, navigate } from "gatsby";
+import { Link } from "gatsby";
 
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
@@ -11,20 +11,18 @@ import SEO from "../components/seo";
 import { useAuth0 } from "@auth0/auth0-react";
 
 const IndexPage = () => {
-  const { user, isAuthenticated, isLoading } = useAuth0();
+  const { user, isAuthenticated, loading, isLoading, loginWithRedirect } = useAuth0();
 
   useEffect(()=>{
+    if (isLoading) {
+      return <div>Loading ...</div>;
+    }
+
     if(!isAuthenticated) {
-      navigate("/login");
+      loginWithRedirect();
       return null;
     }
-  },[isAuthenticated]);
-
-  if (isLoading) {
-    return <div>Loading ...</div>;
-  }
-
-  
+  },[isAuthenticated, loading, isLoading, loginWithRedirect ]);
 
   return (
     <Layout>
