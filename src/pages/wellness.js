@@ -63,19 +63,19 @@ const Wellness = () => {
 
       <Row className="mb-8">
         <a id="counseling" href="/" className="d-none">Counseling</a>
-        <h2 className="d-sm-block d-md-block d-lg-none mb-5">Counseling on Your Time</h2>
+        <h2 className="d-sm-block d-md-none d-lg-none mb-3">Counseling on Your Time</h2>
             <Col md={4} className="my-auto">
               <Card.Img src="/images/your-time.svg" alt="Card image" />
             </Col>
-            <Col md={8} className="my-auto">
-                  <h2 className="mb-6 d-sm-none d-md-none d-lg-block">Counseling on Your Time</h2>
+            <Col md={8} sm={12} className="my-auto">
+                  <h2 className="mb-3 d-sm-none d-md-block d-lg-block">Counseling on Your Time</h2>
                   <p className="big mb-4">
                     Our specially trained representatives will match you with the right counselor for your specific mental health needs. 
                   </p>
-                  <Col md={12} className="text-right">
-                    <a href="tel:18443905052" class="text-link">
+                  <Col md={12} className="text-right text-left-mobile">
+                    <span class="text-link text-left-mobile">
                       Call 1-844-390-5052 to Schedule
-                    </a>
+                    </span >
                 </Col>
             </Col>
       </Row>
@@ -96,13 +96,13 @@ const Wellness = () => {
       </Row>
 
       <Row className="mb-5">
-        <Col md={4}>
+        <Col md={4} className="steps">
           <h2 className="extra-large">Jump Start your Health</h2>
           <p className="big mb-5">Need an accountability buddy? We got your back. Jump starting your health can be as simple as 1,2,3.</p>
           <img src="/images/trainer.svg" alt=""/>
         </Col>
 
-        <Col md={8}>
+        <Col md={8} className="steps">
           <Row className="mb-5">
             <Col md={2}>
               <span className="step float-right">1</span>
@@ -141,7 +141,7 @@ const Wellness = () => {
           <h2 className="title text-white">Keep your wallet happy too</h2>
           <p className="text-white mb-2">Savings on things you use every day, and things you need every once in a while. Something for everyone!</p>
           <p className="text-white mb-5"><i>The ReviveMarketplace powered by BenefitHub</i></p>
-              <a href="https://myrevive.benefithub.com" className="btn btn-secondary btn-lg">
+              <a href="https://myrevive.benefithub.com" className="btn btn-secondary btn-lg mb-4">
                  Start Saving Today
                </a>
           </Col>

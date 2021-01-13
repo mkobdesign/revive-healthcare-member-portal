@@ -39,9 +39,10 @@ a {
   color: $revive-blue;
 }
 
-a.text-link {
+.text-link {
   font-weight: bold;
   display: block;
+  color: $revive-blue;
 }
 
 .flex-1 {
@@ -173,7 +174,8 @@ img {
   p {
     font-size: 0.98rem;
   }
-  h2 {
+  h2,
+  h2.extra-large {
     font-size: 1.2rem;
   }
   h4 {
@@ -193,5 +195,22 @@ img {
   }
   .float-sm-none-only {
     float: none !important;
+  }
+  .step {
+    float: none !important;
+    margin: 40px auto 20px;
+  }
+  .steps {
+    text-align: center;
+  }
+  .text-link {
+    display: inline;
+    text-align: left !important;
+  }
+  .steps .text-link {
+    text-align: center !important;
+  }
+  .text-left-mobile {
+    text-align: left !important;
   }
 }
