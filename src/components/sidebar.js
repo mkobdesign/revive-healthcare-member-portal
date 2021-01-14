@@ -4,6 +4,7 @@ import { Link } from "gatsby";
 import { useAuth0 } from "@auth0/auth0-react";
 import logo from "../../static/images/revive-healthcare-logo.png";
 import logomobile from "../../static/images/revive-logo-small.svg";
+import grid from "../../static/images/icons/grid.svg";
 
 import Navbar from "react-bootstrap/Navbar";
 import Col from "react-bootstrap/Col";
@@ -37,7 +38,7 @@ const Sidebar = ({ siteTitle }) => {
               <ul className="nav align-top d-flex justify-content-end">
               <li className="nav-item">
                 <Link to="/" className="nav-link" activeClassName="active-link">
-                  <img src="./images/icons/grid.svg" alt="" width="24" height="24" title="Dashboard" />
+                  <img src={grid} alt="" width="24" height="24" title="Dashboard" />
                   Dashboard
                 </Link>
               </li>
