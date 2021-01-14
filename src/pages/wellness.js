@@ -4,6 +4,7 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Card from "react-bootstrap/Card";
+import Loader from "../components/loder";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 
@@ -21,7 +22,7 @@ const Wellness = () => {
     }
   },[isAuthenticated, isLoading, loginWithRedirect ]);
 
-  return (
+  return isAuthenticated ? (
     <Layout>
     <SEO title="My Wellness" />
     <Container fluid>
@@ -151,6 +152,8 @@ const Wellness = () => {
       </Row>
     </Container>
   </Layout>
+  ) : (
+    <Loader />
   );
 };
 export default Wellness;

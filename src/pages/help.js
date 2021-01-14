@@ -5,6 +5,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Card from "react-bootstrap/Card";
 import SEO from "../components/seo";
+import Loader from "../components/loder";
 import { useAuth0 } from "@auth0/auth0-react";
 
 const Help = () => {
@@ -21,7 +22,7 @@ const Help = () => {
     }
   },[isAuthenticated, isLoading, loginWithRedirect ]);
 
-  return (
+  return isAuthenticated ? (
     <Layout>
     <SEO title="Help" />
     <Container>
@@ -79,6 +80,8 @@ const Help = () => {
       </Row>
     </Container>
   </Layout>
+  ) : (
+    <Loader />
   );
 };
 

@@ -5,7 +5,7 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Card from "react-bootstrap/Card";
-
+import Loader from "../components/loder";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import { useAuth0 } from "@auth0/auth0-react";
@@ -15,7 +15,7 @@ const IndexPage = () => {
 
   useEffect(()=>{
     if (isLoading) {
-      return <div>Loading ...</div>;
+      return <Loader />;
     }
 
     if(!isAuthenticated) {
@@ -24,7 +24,7 @@ const IndexPage = () => {
     }
   },[isAuthenticated, loading, isLoading, loginWithRedirect ]);
 
-  return (
+  return isAuthenticated ? (
     <Layout>
     <SEO title="Home" />
     <Container fluid>
@@ -102,6 +102,8 @@ const IndexPage = () => {
       </Row>
     </Container>
   </Layout>
+  ) : (
+    <Loader />
   );
 };
 
