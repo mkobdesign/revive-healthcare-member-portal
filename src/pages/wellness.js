@@ -69,14 +69,14 @@ const Wellness = () => {
               <Card.Img src="/images/your-time.svg" alt="Card image" />
             </Col>
             <Col md={8} className="my-auto">
-                  <h2 className="mb-6 d-sm-none d-md-none d-lg-block">Counseling on Your Time</h2>
+                  <h2 className="d-sm-none d-md-none d-lg-block">Counseling on Your Time</h2>
                   <p className="big mb-4">
                     Our specially trained representatives will match you with the right counselor for your specific mental health needs. 
                   </p>
                   <Col md={12} className="text-right">
-                    <a href="tel:18443905052" class="text-link">
+                    <span className="text-link">
                       Call 1-844-390-5052 to Schedule
-                    </a>
+                    </span>
                 </Col>
             </Col>
       </Row>

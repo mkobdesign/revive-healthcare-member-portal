@@ -2,13 +2,13 @@
 
 .card {
   border-radius: 24px;
+  overflow: hidden;
 
   .card-body {
     padding: 1.75rem;
   }
-
-  .text-link {
-    font-weight: bold;
+  .overflowy {
+    overflow: visible;
   }
 
   &.image-below-card {
@@ -55,6 +55,16 @@
   }
 }
 
+.taller-1 .card-img {
+  margin-top: 1rem;
+}
+.taller-2 .card-img {
+  margin-top: 2rem;
+}
+.taller-3 .card-img {
+  margin-top: 3rem;
+}
+
 @include media-breakpoint-down(md) {
   .card-img-overlay {
     padding: 16px;
@@ -73,6 +83,12 @@
   }
   .taller-mobile-4 .card-img {
     margin-top: 4rem;
+  }
+  .taller-mobile-5 .card-img {
+    margin-top: 5rem;
+  }
+  .taller-mobile-6 .card-img {
+    margin-top: 6rem;
   }
   .intro-card .card-img-overlay {
     padding: 25px;

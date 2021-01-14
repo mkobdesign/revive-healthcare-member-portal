@@ -5,6 +5,10 @@ import { useAuth0 } from "@auth0/auth0-react";
 import logo from "../../static/images/revive-healthcare-logo.png";
 import logomobile from "../../static/images/revive-logo-small.svg";
 import grid from "../../static/images/icons/grid.svg";
+import heart from "../../static/images/icons/heart.svg";
+import umbrella from "../../static/images/icons/umbrella.svg";
+import helpcircle from "../../static/images/icons/help-circle.svg";
+import logout2 from "../../static/images/icons/log-out.svg";
 
 import Navbar from "react-bootstrap/Navbar";
 import Col from "react-bootstrap/Col";
@@ -48,7 +52,7 @@ const Sidebar = ({ siteTitle }) => {
                   className="nav-link"
                   activeClassName="active-link"
                 >
-                  <img src="./images/icons/heart.svg" alt="" width="24" height="24" title="Heart" />
+                  <img src={heart} alt="" width="24" height="24" title="Heart" />
                   My Health
                 </Link>
               </li>
@@ -58,7 +62,7 @@ const Sidebar = ({ siteTitle }) => {
                   className="nav-link"
                   activeClassName="active-link"
                 >
-                  <img src="./images/icons/umbrella.svg" alt="" width="24" height="24" title="Umbrella" />
+                  <img src={umbrella} alt="" width="24" height="24" title="Umbrella" />
                   My Wellness
                 </Link>
               </li>
@@ -66,13 +70,13 @@ const Sidebar = ({ siteTitle }) => {
               <ul className="nav d-flex text-right mt-auto align-items-end">
                 <li className="nav-item">
                   <Link to="/help" className="nav-link" activeClassName="active-link">
-                    <img src="./images/icons/help-circle.svg" alt="" width="24" height="24" title="Dashboard" />
+                    <img src={helpcircle} alt="" width="24" height="24" title="Help" />
                     Help
                   </Link>
                 </li>
                 <li className="nav-item">
                   <a href="#logout" className="nav-link" onClick={() =>logout()}>
-                    <img src="./images/icons/log-out.svg" alt="" width="24" height="24" title="Dashboard" />
+                    <img src={logout2} alt="" width="24" height="24" title="Log Out" />
                     Log Out
                   </a>
                 </li>
