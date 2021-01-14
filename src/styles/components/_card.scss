@@ -7,9 +7,6 @@
   .card-body {
     padding: 1.75rem;
   }
-  .overflowy {
-    overflow: visible;
-  }
 
   &.image-below-card {
     margin-bottom: 40px;
@@ -55,6 +52,9 @@
   }
 }
 
+.overflowy {
+  overflow: visible;
+}
 .taller-1 .card-img {
   margin-top: 1rem;
 }
