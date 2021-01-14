@@ -9,6 +9,7 @@ $theme-colors: (
 @import "base/variables";
 @import "base/root";
 
+@import "components/loader";
 @import "components/buttons";
 @import "components/header";
 @import "components/sidebar";
