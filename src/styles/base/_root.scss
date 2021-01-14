@@ -3,7 +3,7 @@
 
 html,
 body {
-  position: relative; 
+  position: relative;
   min-height: 100vh;
   font-family: "Karla", helvetica, sans-serif;
   overflow-x: hidden !important;
@@ -25,6 +25,9 @@ h6 {
   font-family: "Boston-Semibold", helvetica, sans-serif;
   font-weight: 600;
 }
+.bolded {
+  font-family: "Boston-Bold", helvetica, sans-serif;
+}
 .subtitle-caps {
   font-family: "Boston-Semibold";
   font-size: 1.5rem;
@@ -43,6 +46,11 @@ a {
 a.text-link {
   font-weight: bold;
   display: block;
+}
+
+.text-link {
+  font-weight: bold;
+  color: $revive-blue;
 }
 
 .flex-1 {

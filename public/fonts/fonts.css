@@ -4,24 +4,24 @@
 }
 
 @font-face {
-  font-family: 'Boston-Bold';
-  src: url('fonts/BostonBold.eot');
-  src: url('fonts/BostonBold.eot') format('embedded-opentype'),
-       url('fonts/BostonBold.woff2') format('woff2'),
-       url('fonts/BostonBold.woff') format('woff'),
-       url('fonts/BostonBold.ttf') format('truetype'),
-       url('fonts/BostonBold.svg#BostonBold') format('svg');
+  font-family: "Boston-Bold";
+  src: url("BostonBold.eot");
+  src: url("BostonBold.eot") format("embedded-opentype"),
+    url("BostonBold.woff2") format("woff2"),
+    url("BostonBold.woff") format("woff"),
+    url("BostonBold.ttf") format("truetype"),
+    url("BostonBold.svg#BostonBold") format("svg");
   font-weight: 800;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Boston-Semibold';
-  src: url('BostonSemiBold.eot');
-  src: url('BostonSemiBold.eot') format('embedded-opentype'),
-       url('BostonSemiBold.woff2') format('woff2'),
-       url('BostonSemiBold.woff') format('woff'),
-       url('BostonSemiBold.ttf') format('truetype'),
-       url('BostonSemiBold.svg#BostonSemiBold') format('svg');
+  font-family: "Boston-Semibold";
+  src: url("BostonSemiBold.eot");
+  src: url("BostonSemiBold.eot") format("embedded-opentype"),
+    url("BostonSemiBold.woff2") format("woff2"),
+    url("BostonSemiBold.woff") format("woff"),
+    url("BostonSemiBold.ttf") format("truetype"),
+    url("BostonSemiBold.svg#BostonSemiBold") format("svg");
 }

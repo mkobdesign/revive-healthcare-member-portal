@@ -34,6 +34,7 @@
     font-size: 22px;
     padding: 0.5rem 3rem 0.5rem 0;
     border-right: 8px solid transparent;
+    font-family: "Boston-Semibold", helvetica, sans-serif;
 
     img {
       filter: brightness(0%);
@@ -47,6 +48,7 @@
 a.nav-link.active-link {
   color: $revive-blue;
   border-right: 8px solid $revive-blue;
+  font-family: "Boston-Bold", helvetica, sans-serif;
 
   img {
     filter: brightness(100%);
