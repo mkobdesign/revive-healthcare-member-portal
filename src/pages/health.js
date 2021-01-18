@@ -70,11 +70,13 @@ const Health = () => {
 
       <Row className="mb-8">
             <Col md={4} className="my-auto">
-            <h2 className="d-none d-sm-block d-md-none d-lg-none mb-5">See a Doctor, Anywhere </h2>
+            <h2 className="d-none d-sm-block d-md-none d-lg-none mb-5">See a Doctor from the
+Comfort of Your Home</h2>
               <Card.Img src="/images/doctor.svg" alt="Doctor" />
             </Col>
             <Col md={8} className="my-auto">
-                  <h2 className="d-none d-sm-none d-md-block d-lg-block">See a Doctor, Anywhere </h2>
+                  <h2 className="d-none d-sm-none d-md-block d-lg-block">See a Doctor from the
+Comfort of Your Home</h2>
                   <Card.Text className="big mb-3">
                   Schedule a virtual visit with a doctor wherever life takes you. Virtual visits give you the flexibility to see a doctor when you need it most.
                   </Card.Text>
