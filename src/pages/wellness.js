@@ -109,8 +109,8 @@ const Wellness = () => {
               <span className="step float-right">1</span>
             </Col>
             <Col md={10}>
-              <h4>Health Risk Assessment (HRA)</h4>
-              <p className="mb-3">Take our HRA to better understand where you are at in your health journey. </p>
+              <h4>Wellness Assessment</h4>
+              <p className="mb-3">Take our Wellness Assessment to better understand where you are at in your health journey. </p>
               <a href="https://myrevivehealth.medikeeper.com/accounts/v8/ReviveHealth/login" className="text-link text-right">Take the HRA &gt;</a>
             </Col>
           </Row>
