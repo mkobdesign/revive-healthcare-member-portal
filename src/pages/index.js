@@ -11,6 +11,12 @@ import SEO from "../components/seo";
 import { useAuth0 } from "@auth0/auth0-react";
 
 const IndexPage = () => {
+  const date = new Date();
+let hours = date.getHours();
+let status = (hours < 12)? "Good Morning" :
+             ((hours <= 16 && hours >= 12 ) ? "Good Afternoon" : ((hours <= 20 && hours >= 16 ) ? "Good Evening" :"Good Night"));
+
+  let welcomeMessage = status;
   const { user, isAuthenticated, loading, isLoading, loginWithRedirect } = useAuth0();
 
   useEffect(()=>{
@@ -22,7 +28,8 @@ const IndexPage = () => {
       loginWithRedirect();
       return null;
     }
-  },[isAuthenticated, loading, isLoading, loginWithRedirect ]);
+    
+  },[isAuthenticated, loading, isLoading, user, loginWithRedirect ]);
 
   return isAuthenticated ? (
     <Layout>
@@ -34,7 +41,7 @@ const IndexPage = () => {
             <Card.Img src="/images/countryside.svg" className="d-sm-none d-md-none d-lg-block" alt="Card image" />
             <Card.Img src="/images/welcome-hero-mobile.svg" className="d-sm-block d-md-block d-lg-none" alt="Card image" />
                 <Card.ImgOverlay>
-                  <h2 className="bolded">Good morning, {user?.firstName}</h2>
+                  <h2 className="bolded">{welcomeMessage}, {(user?.nickname) ? user?.nickname: user?.name }</h2>
                   <Card.Text>
                     What would you like to do today?
                   </Card.Text>
