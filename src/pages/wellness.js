@@ -119,7 +119,7 @@ const Wellness = () => {
               <span className="step float-right">2</span>
             </Col>
             <Col md={10}>
-              <h4>Biometrics</h4>
+              <h4>Biometrics </h4>
               <p className="mb-3">Your height, weight, waist circumference and some basic blood work help evaluate your overall health and will help your health coach craft a plan just for you.</p>
               <a href="https://www.wellconnectplus.com/?company=XEG808" className="text-link text-right">Get your Biometrics &gt;</a>
             </Col>
