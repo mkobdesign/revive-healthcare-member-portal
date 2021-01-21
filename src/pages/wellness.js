@@ -111,7 +111,7 @@ const Wellness = () => {
             <Col md={10}>
               <h4>Wellness Assessment</h4>
               <p className="mb-3">Take our Wellness Assessment to better understand where you are at in your health journey. </p>
-              <a href="https://myrevivehealth.medikeeper.com/accounts/v8/ReviveHealth/login" className="text-link text-right">Take the HRA &gt;</a>
+              <a href="https://myrevivehealth.medikeeper.com/accounts/v8/ReviveHealth/login" className="text-link text-right">Take the Wellness Assessment &gt;</a>
             </Col>
           </Row>
           <Row className="mb-5">
@@ -130,7 +130,7 @@ const Wellness = () => {
             </Col>
             <Col md={10}>
               <h4>Talk to a Health Coach</h4>
-              <p className="mb-3">Get an expert involved to help you understand your HRA and biometric results. A health coach is the perfect addition to take your journey to the next level.</p>
+              <p className="mb-3">Get an expert involved to help you understand your Wellness Assessment and biometric results. A health coach is the perfect addition to take your journey to the next level.</p>
               <a href="https://www.wellconnectplus.com/?company=XEG808" className="text-link text-right">Schedule a Session with a Health Coach &gt;</a>
             </Col>
           </Row>
