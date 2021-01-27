@@ -80,7 +80,7 @@ Comfort of Your Home</h2>
                   <Card.Text className="big mb-3">
                   Schedule a virtual visit with a doctor wherever life takes you. Virtual visits give you the flexibility to see a doctor when you need it most.
                   </Card.Text>
-                  <a href="https://myrevivehealth.sandbox.connectedcare.md/#/patient" className="btn btn-outline-info float-right d-sm-block-only float-sm-none-only">
+                  <a href="https://myrevivehealth.connectedcare.md/#/patient" className="btn btn-outline-info float-right d-sm-block-only float-sm-none-only">
                       Schedule a Virtual Visit
                     </a>
             </Col>
