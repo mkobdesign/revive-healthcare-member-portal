@@ -85,7 +85,7 @@ let status = (hours < 12)? "Good Morning" :
           </div>
           <Row>
         <Col xs={6}>
-          <a href="https://main.d2b2s0fjal3vo7.amplifyapp.com/auth/login">
+          <a href="https://revivehealth.ravkoo.com/">
             <Card className="shadow-sm border-0 mb-5 taller-2 taller-mobile-2">
                 <Card.Img src="/images/rx.png" alt="Renew Your Prescription" />
                 <Card.ImgOverlay>
