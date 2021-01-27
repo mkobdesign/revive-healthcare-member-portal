@@ -80,7 +80,7 @@ Comfort of Your Home</h2>
                   <Card.Text className="big mb-3">
                   Schedule a virtual visit with a doctor wherever life takes you. Virtual visits give you the flexibility to see a doctor when you need it most.
                   </Card.Text>
-                  <a href="https://myrevivehealth.sandbox.connectedcare.md/#/patient" className="btn btn-outline-info float-right d-sm-block-only float-sm-none-only">
+                  <a href="https://myrevivehealth.connectedcare.md/#/patient" className="btn btn-outline-info float-right d-sm-block-only float-sm-none-only">
                       Schedule a Virtual Visit
                     </a>
             </Col>
@@ -91,9 +91,9 @@ Comfort of Your Home</h2>
                   <h2>Refill your prescriptions. Now.</h2>
                   <Card.Img className="d-none d-sm-block d-md-none d-lg-none mt-5 mb-3" src="/images/dr-color.svg" alt="Doctor" />
                   <Card.Text className="big mb-3">
-                  Fast and easy access to your prescriptions, delivered right to your door.
+                  Fast and easy access to your prescriptions, delivered right to your door. 
                   </Card.Text>
-                  <a href="https://main.d2b2s0fjal3vo7.amplifyapp.com/auth/login" className="btn btn-outline-info d-sm-block-only">
+                  <a href="https://revivehealth.ravkoo.com/" className="btn btn-outline-info d-sm-block-only">
                       Check your Prescriptions
                     </a>
             </Col>
