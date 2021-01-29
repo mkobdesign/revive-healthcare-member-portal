@@ -12,14 +12,42 @@ import { useAuth0 } from "@auth0/auth0-react";
 
 const IndexPage = () => {
   const date = new Date();
-let hours = date.getHours();
-let status = (hours < 12)? "Good Morning" :
+  let hours = date.getHours();
+  let status = (hours < 12)? "Good Morning" :
              ((hours <= 16 && hours >= 12 ) ? "Good Afternoon" : ((hours <= 20 && hours >= 16 ) ? "Good Evening" :"Good Night"));
 
   let welcomeMessage = status;
   const { user, isAuthenticated, loading, isLoading, loginWithRedirect } = useAuth0();
+  const [snapMDRedirectUrl, setSnapMDRedirectUrl] = React.useState('https://myrevivehealth.connectedcare.md/#/patient');
 
-  useEffect(()=>{
+  // function to ping the SnapMD SSO Handshake application for SSO
+  async function postSnapMDSSOData(url = '', data = {}) {
+    const formBody = Object.keys(data).map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key])).join('&')
+    const response = await fetch(url, {
+      method: 'POST', 
+      mode: 'cors',
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded'
+      },
+      redirect: 'follow',
+      body: formBody
+    });
+    return response.json();   
+  }
+
+  // function to consume the SnapMD SSO process
+  function snapMDSSORequest() {
+    // ping sso handshake api to get redirect url
+    const req = { name: user.name, email: user.email };
+    const url = 'http://54.204.232.225/api/SnapMD/SSOHandshake';
+    const formData = new FormData();
+    formData.append('name', user.name);
+    formData.append('email', user.email);
+
+    return postSnapMDSSOData(url, req);
+  }
+
+  useEffect(async ()=>{
     if (isLoading) {
       return <Loader />;
     }
@@ -28,8 +56,13 @@ let status = (hours < 12)? "Good Morning" :
       loginWithRedirect();
       return null;
     }
-    
-  },[isAuthenticated, loading, isLoading, user, loginWithRedirect ]);
+
+    // get the snapMD SSO redirect URL
+    await snapMDSSORequest().then((redirect) => {
+      setSnapMDRedirectUrl(redirect);
+    });
+
+  },[isAuthenticated, loading, isLoading, user, loginWithRedirect, snapMDSSORequest, snapMDRedirectUrl ]);
 
   return isAuthenticated ? (
     <Layout>
@@ -51,7 +84,7 @@ let status = (hours < 12)? "Good Morning" :
       </Row>
       <Row>
         <Col xs={6} lg={5}>
-          <a href="https://myrevivehealth.connectedcare.md/#/patient">
+          <a class="snapmd-sso-trigger" href={snapMDRedirectUrl}>
             <Card className="shadow-sm border-0 mb-5 taller-mobile-2">
               <Card.Img src="/images/virtual-visit.png" alt="Schedule a Virtual Visit" />
               <Card.ImgOverlay>
