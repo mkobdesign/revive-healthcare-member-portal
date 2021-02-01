@@ -39,7 +39,7 @@ const IndexPage = () => {
   function snapMDSSORequest() {
     // ping sso handshake api to get redirect url
     const req = { name: user.name, email: user.email };
-    const url = 'http://54.204.232.225/api/SnapMD/SSOHandshake';
+    const url = 'https://snapmd.myrevive.health/api/SnapMD/SSOHandshake';
     const formData = new FormData();
     formData.append('name', user.name);
     formData.append('email', user.email);
