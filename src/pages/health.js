@@ -11,9 +11,37 @@ import { useAuth0 } from "@auth0/auth0-react";
 
 
 const Health = () => {
-	const { isAuthenticated, isLoading, loginWithRedirect } = useAuth0();
+  const { isAuthenticated, isLoading, loginWithRedirect } = useAuth0();
+  const [snapMDRedirectUrl, setSnapMDRedirectUrl] = React.useState('https://myrevivehealth.connectedcare.md/#/patient');
 
-	useEffect(()=>{
+  // function to ping the SnapMD SSO Handshake application for SSO
+  async function postSnapMDSSOData(url = '', data = {}) {
+    const formBody = Object.keys(data).map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key])).join('&')
+    const response = await fetch(url, {
+      method: 'POST', 
+      mode: 'cors',
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded'
+      },
+      redirect: 'follow',
+      body: formBody
+    });
+    return response.json();   
+  }
+
+  // function to consume the SnapMD SSO process
+  function snapMDSSORequest() {
+    // ping sso handshake api to get redirect url
+    const req = { name: user.name, email: user.email };
+    const url = 'https://snapmd.myrevive.health/api/SnapMD/SSOHandshake';
+    const formData = new FormData();
+    formData.append('name', user.name);
+    formData.append('email', user.email);
+
+    return postSnapMDSSOData(url, req);
+  }
+
+	useEffect(async ()=>{
 		if (isLoading) {
 		return <div>Loading ...</div>;
 		}
@@ -21,8 +49,13 @@ const Health = () => {
 		if(!isAuthenticated) {
 		loginWithRedirect();
 		return null;
-		}
-	},[isAuthenticated, isLoading, loginWithRedirect ]);	
+    }
+    
+    // get the snapMD SSO redirect URL
+    await snapMDSSORequest().then((redirect) => {
+      setSnapMDRedirectUrl(redirect);
+    });
+	},[isAuthenticated, isLoading, loginWithRedirect, snapMDSSORequest, snapMDRedirectUrl ]);	
 	
 	return isAuthenticated ? (
 	  <Layout>
@@ -80,7 +113,7 @@ Comfort of Your Home</h2>
                   <Card.Text className="big mb-3">
                   Schedule a virtual visit with a doctor wherever life takes you. Virtual visits give you the flexibility to see a doctor when you need it most.
                   </Card.Text>
-                  <a href="https://myrevivehealth.connectedcare.md/#/patient" className="btn btn-outline-info float-right d-sm-block-only float-sm-none-only">
+                  <a href={snapMDRedirectUrl} className="btn btn-outline-info float-right d-sm-block-only float-sm-none-only">
                       Schedule a Virtual Visit
                     </a>
             </Col>
@@ -127,7 +160,7 @@ Comfort of Your Home</h2>
                   <Card.Text className="big mb-3">
                     Order an at home kit, or go in to have your blood sample taken. Your choice!
                   </Card.Text>
-                  <a href="https://www.wellconnectplus.com/?company=XEG808" className="btn btn-outline-info float-right d-sm-block-only float-sm-none-only">
+                  <a href="https://www.pixel.labcorp.com/" className="btn btn-outline-info float-right d-sm-block-only float-sm-none-only">
                       Get your Blood work
                     </a>
             </Col>
