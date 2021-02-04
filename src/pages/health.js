@@ -11,7 +11,7 @@ import { useAuth0 } from "@auth0/auth0-react";
 
 
 const Health = () => {
-  const { isAuthenticated, isLoading, loginWithRedirect } = useAuth0();
+  const { user, isAuthenticated, isLoading, loginWithRedirect } = useAuth0();
   const [snapMDRedirectUrl, setSnapMDRedirectUrl] = React.useState('https://myrevivehealth.connectedcare.md/#/patient');
 
   // function to ping the SnapMD SSO Handshake application for SSO
