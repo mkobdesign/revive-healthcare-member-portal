@@ -67,8 +67,14 @@ module.exports = {
     {
       resolve: "gatsby-plugin-auth0",
       options: {
-        domain: "revive-dev.us.auth0.com",
-        clientID: "ATcERwqyrXYmuaOsNrjo04LrbDPDpgWL",
+        domain: "revive-prod.us.auth0.com",
+        clientID: "BDXo9vef8MM7bN5sHd5KCMlj6cBmNVFg",
+      }
+    },
+    {
+      resolve: "gatsby-plugin-google-analytics",
+      options: {
+        trackingId: "G-CDQCSMECHR"
       }
     }
     // {
