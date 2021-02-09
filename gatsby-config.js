@@ -72,9 +72,9 @@ module.exports = {
       }
     },
     {
-      resolve: "gatsby-plugin-google-analytics",
+      resolve: "gatsby-plugin-google-gtag",
       options: {
-        trackingId: "G-CDQCSMECHR"
+        trackingIds: ["G-CDQCSMECHR"]
       }
     }
     // {
