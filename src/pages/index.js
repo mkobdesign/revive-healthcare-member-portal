@@ -17,8 +17,9 @@ const IndexPage = () => {
              ((hours <= 16 && hours >= 12 ) ? "Good Afternoon" : ((hours <= 20 && hours >= 16 ) ? "Good Evening" :"Good Night"));
 
   let welcomeMessage = status;
-  const { user, isAuthenticated, loading, isLoading, loginWithRedirect } = useAuth0();
+  const { user, isAuthenticated, loading, isLoading, loginWithRedirect, getIdTokenClaims } = useAuth0();
   const [snapMDRedirectUrl, setSnapMDRedirectUrl] = React.useState('https://myrevivehealth.connectedcare.md/#/patient');
+  let [ showNewUserBanner, setShowNewUserBanner ] = React.useState(false);
 
   // function to ping the SnapMD SSO Handshake application for SSO
   async function postSnapMDSSOData(url = '', data = {}) {
@@ -32,6 +33,7 @@ const IndexPage = () => {
       redirect: 'follow',
       body: formBody
     });
+
     return response.json();   
   }
 
@@ -62,11 +64,25 @@ const IndexPage = () => {
       setSnapMDRedirectUrl(redirect);
     });
 
+    // get the created_at value from the id token claims. We use this to show the intro banner
+    await getIdTokenClaims().then((c) => {
+      const created_at = new Date(c["https://myrevive.health/user_created_at"]);
+      const hoursSinceSignup = Math.floor(Math.abs(new Date() - created_at) / 36e5);
+      setShowNewUserBanner(hoursSinceSignup <= 24);
+    })
+
   },[isAuthenticated, loading, isLoading, user, loginWithRedirect, snapMDSSORequest, snapMDRedirectUrl ]);
 
   return isAuthenticated ? (
     <Layout>
     <SEO title="Home" />
+    {showNewUserBanner && (
+        <Row noGutters className="welcome-banner">
+          <Col noGutters xl={12}>
+          It’s official: You’re a Reviver! It takes about 24 hours to get all your info into our system so some services may not be available right away, but if you need to be seen by our docs sooner, just let us know at 888-335-8836.
+          </Col>
+        </Row>
+      )}
     <Container fluid>
       <Row>
         <Col xl={12} className="mb-5">
@@ -84,7 +100,7 @@ const IndexPage = () => {
       </Row>
       <Row>
         <Col xs={6} lg={5}>
-          <a class="snapmd-sso-trigger" href={snapMDRedirectUrl}>
+          <a className="snapmd-sso-trigger" href={snapMDRedirectUrl}>
             <Card className="shadow-sm border-0 mb-5 taller-mobile-2">
               <Card.Img src="/images/virtual-visit.png" alt="Schedule a Virtual Visit" />
               <Card.ImgOverlay>
