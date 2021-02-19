@@ -144,7 +144,7 @@ const IndexPage = () => {
           </a>
         </Col>
         <Col xs={6}>
-          <a href="https://revive-prod.us.auth0.com/samlp/xv17kE6M9zpyMXOf0RZOUcLA9yUDMJ2w">
+          <a href="https://myrevive.benefithub.com/Account/Login?ReturnUrl=%2f">
             <Card className="shadow-sm border-0 mb-5 taller-2 taller-mobile-2">
                 <Card.Img src="/images/benefit-hub.png" alt="Access the Marketplace" />
                 <Card.ImgOverlay>
