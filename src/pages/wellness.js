@@ -142,7 +142,7 @@ const Wellness = () => {
           <h2 className="title text-white">Keep your wallet happy too</h2>
           <p className="text-white mb-2">Savings on things you use every day, and things you need every once in a while. Something for everyone!</p>
           <p className="text-white mb-5"><i>The ReviveMarketplace powered by BenefitHub</i></p>
-              <a href="https://myrevive.benefithub.com" className="btn btn-secondary btn-lg mb-3">
+              <a href="https://revive-prod.us.auth0.com/samlp/xv17kE6M9zpyMXOf0RZOUcLA9yUDMJ2w" className="btn btn-secondary btn-lg mb-3">
                  Start Saving Today
                </a>
           </Col>
