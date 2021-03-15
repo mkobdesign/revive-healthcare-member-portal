@@ -2,6 +2,31 @@
 main {
   padding: 2rem 0px 0px 20px;
 }
+.embed-responsive {
+  height: 85vh !important;
+  margin-left: -20px;
+  margin-top: -23px;
+  width: calc(100% + 40px)!important;
+
+  @include media-breakpoint-up(sm) {
+    height: 74vh !important;
+    margin-left: -22px;
+    margin-top: -25px;
+    width: calc(100% + 44px) !important;
+  }
+  @include media-breakpoint-up(md) {
+    height: 100vh !important;
+    margin-left: -23px;
+    margin-top: -40px;
+    width: calc(100% + 46px)!important;
+  }
+  @include media-breakpoint-up(lg) {
+    height: 99.5vh!important;
+    margin-left: -44px;
+    margin-top: -31px;
+    width: calc(100% + 66px)!important;
+  }
+}
 @include media-breakpoint-down(md) {
   main {
     padding: 40px 0px 0px 0px;
