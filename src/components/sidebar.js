@@ -67,7 +67,7 @@ const Sidebar = ({ siteTitle }) => {
                   My Wellness
                 </Link>
               </li>
-              <li className="nav-item">
+              <li className="nav-item d-none">
                 <Link
                   to="/chatbot"
                   className="nav-link"
