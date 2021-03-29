@@ -59,7 +59,12 @@ const IndexPage = () => {
 
         // set the cadence SSO url
         const metadata = c["https://myrevive.health/user_metadata"];
-        setCadenceRedirectUrl(metadata.cadence_redirect_url);
+        if (!!metadata.cadence_redirect_url) {
+          console.log('setting cadence url to ' + metadata.cadence_redirect_url);
+          setCadenceRedirectUrl(metadata.cadence_redirect_url);
+        } else {
+          console.log('cadence url not set...');
+        }
       });
     }
 
