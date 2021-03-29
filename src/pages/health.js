@@ -35,7 +35,9 @@ const Health = () => {
       await getIdTokenClaims().then(async (c) => {
         // set the cadence SSO url
         const metadata = c["https://myrevive.health/user_metadata"];
-        setCadenceRedirectUrl(metadata.cadence_redirect_url);
+        if (!!metadata.cadence_redirect_url) {
+          setCadenceRedirectUrl(metadata.cadence_redirect_url);
+        }
       });
     }
 
