@@ -154,7 +154,7 @@ const Wellness = () => {
                   health coach craft a plan just for you.
                 </p>
                 <a
-                  href="https://www.wellconnectplus.com/?company=XEG808"
+                  href="https://revive-prod.us.auth0.com/samlp/Y5AntzZADkjcYzPSW19wOduys1bktCEP"
                   className="text-link text-right"
                 >
                   Get your Biometrics &gt;
@@ -173,7 +173,7 @@ const Wellness = () => {
                   perfect addition to take your journey to the next level.
                 </p>
                 <a
-                  href="https://www.wellconnectplus.com/?company=XEG808"
+                  href="https://revive-prod.us.auth0.com/samlp/Y5AntzZADkjcYzPSW19wOduys1bktCEP"
                   className="text-link text-right"
                 >
                   Schedule a Session with a Health Coach &gt;
