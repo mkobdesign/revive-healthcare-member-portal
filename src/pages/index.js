@@ -30,11 +30,16 @@ const IndexPage = () => {
     isLoading,
     loginWithRedirect,
     getIdTokenClaims,
+    logout
   } = useAuth0();
   const [cadenceRedirectUrl, setCadenceRedirectUrl] = React.useState(
     "https://revive.cadencehealth.us/login"
   );
   let [showNewUserBanner, setShowNewUserBanner] = React.useState(false);
+
+  function cadenceUrlClick(e) {
+    logout({ federated: true, redirectUrl: cadenceRedirectUrl });
+  }
 
   useEffect(() => {
     async function processPage() {
@@ -43,7 +48,7 @@ const IndexPage = () => {
       }
 
       if (!isAuthenticated) {
-        loginWithRedirect();
+        await loginWithRedirect();
         return null;
       }
 
@@ -76,6 +81,7 @@ const IndexPage = () => {
     user,
     getIdTokenClaims,
     loginWithRedirect,
+    logout
   ]);
 
   return isAuthenticated ? (
@@ -117,7 +123,7 @@ const IndexPage = () => {
         </Row>
         <Row>
           <Col xs={6} lg={5}>
-            <a className="snapmd-sso-trigger" href={cadenceRedirectUrl}>
+            <a className="snapmd-sso-trigger" href={cadenceRedirectUrl} onClick={cadenceUrlClick}>
               <Card className="shadow-sm border-0 mb-5 taller-mobile-2">
                 <Card.Img
                   src="/images/virtual-visit.png"
