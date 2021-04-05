@@ -16,10 +16,15 @@ const Health = () => {
     isLoading,
     loginWithRedirect,
     getIdTokenClaims,
+    logout
   } = useAuth0();
   const [cadenceRedirectUrl, setCadenceRedirectUrl] = React.useState(
     "https://revive.cadencehealth.us/login"
   );
+
+  function cadenceUrlClick(e) {
+    logout({ federated: true, redirectUrl: cadenceRedirectUrl });
+  }
 
   useEffect(() => {
     async function processPage() {
@@ -48,6 +53,7 @@ const Health = () => {
     loginWithRedirect,
     cadenceRedirectUrl,
     user,
+    logout,
     getIdTokenClaims,
   ]);
 
@@ -117,6 +123,7 @@ const Health = () => {
             </Card.Text>
             <a
               href={cadenceRedirectUrl}
+              onClick={cadenceUrlClick}
               className="btn btn-outline-info float-right d-sm-block-only float-sm-none-only"
             >
               Schedule a Virtual Visit
