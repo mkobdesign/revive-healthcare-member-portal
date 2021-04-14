@@ -53,7 +53,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        icon: "static/images/icons/favicon.svg",
+        icon: "static/images/icons/cropped-Favicon-32x32.png",
         // cache_busting_mode: "none", // Uncomment to enable service worker
         name: `revive-healthcare-client-portal`,
         short_name: `revive-health`,
