@@ -133,15 +133,14 @@ const Health = () => {
 
         <Row className="mb-8">
           <Col md={8} className="my-auto">
-            <h2>Refill your prescriptions. Now.</h2>
+            <h2>Need a refill?</h2>
             <Card.Img
               className="d-none d-sm-block d-md-none d-lg-none mt-5 mb-3"
               src="/images/dr-color.svg"
               alt="Doctor"
             />
             <Card.Text className="big mb-3">
-              Fast and easy access to your prescriptions, delivered right to
-              your door.
+              Have a question about your medication? <a href="tel:+18638755700">Contact our pharmacist at <strong>(863) 875-5700 &gt;</strong></a>
             </Card.Text>
             <a
               href="https://revivehealth.ravkoo.com/"

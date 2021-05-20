@@ -179,14 +179,15 @@ const IndexPage = () => {
                 <a href="https://revivehealth.ravkoo.com/">
                   <Card className="shadow-sm border-0 mb-5 taller-2 taller-mobile-2">
                     <Card.Img
-                      src="/images/rx.png"
-                      alt="Renew Your Prescription"
+                      src="/images/concern.png"
+                      alt="Have a Health Concern?"
                     />
                     <Card.ImgOverlay>
                       <h4 className="bolded" align="right">
-                        Renew your <br />
-                        Prescription
+                        Have a health <br />
+                        concern?
                       </h4>
+                      <p align="right">Learn More &gt;</p>
                     </Card.ImgOverlay>
                   </Card>
                 </a>
