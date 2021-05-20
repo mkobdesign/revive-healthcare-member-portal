@@ -176,7 +176,7 @@ const IndexPage = () => {
             </div>
             <Row>
               <Col xs={6}>
-                <a href="https://revivehealth.ravkoo.com/">
+                <a href="https://www.wellrxpremier.com/Revive/health-conditions">
                   <Card className="shadow-sm border-0 mb-5 taller-2 taller-mobile-2">
                     <Card.Img
                       src="/images/concern.png"
