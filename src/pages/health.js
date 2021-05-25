@@ -140,7 +140,7 @@ const Health = () => {
               alt="Doctor"
             />
             <Card.Text className="big mb-3">
-              Have a question about your medication? <br/><a href="tel:+18638755700">Contact our pharmacist at <strong>(863) 875-5700 &gt;</strong></a>
+              Have a question about your medication? <br/>Contact our pharmacist at <strong>(863) 875-5700 &gt;</strong>
             </Card.Text>
             
           </Col>
