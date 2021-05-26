@@ -139,8 +139,8 @@ const Health = () => {
               src="/images/dr-color.svg"
               alt="Doctor"
             />
-            <Card.Text className="big mb-3">
-              Have a question about your medication? <br/>Contact our pharmacist at <strong>(863) 875-5700 &gt;</strong>
+            <Card.Text className="mb-3">
+              Have a question about your medication? <br/><span class="text-link">Contact our pharmacist at <strong>1-863-875-5700</strong></span>
             </Card.Text>
             
           </Col>
