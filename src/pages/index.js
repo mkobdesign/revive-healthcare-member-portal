@@ -9,7 +9,7 @@ import Loader from "../components/loder";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import { useAuth0 } from "@auth0/auth0-react";
-import { OutboundLink } from "gatsby-plugin-google-gtag"
+import { OutboundLink } from "gatsby-plugin-gtag-outbound";
 
 const IndexPage = () => {
   const date = new Date();

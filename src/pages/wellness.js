@@ -7,7 +7,7 @@ import Card from "react-bootstrap/Card";
 import Loader from "../components/loder";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
-import { OutboundLink } from "gatsby-plugin-google-gtag"
+import { OutboundLink } from "gatsby-plugin-gtag-outbound";
 
 const Wellness = () => {
   const { isAuthenticated, isLoading, loginWithRedirect } = useAuth0();
