@@ -19,13 +19,6 @@ import Row from 'react-bootstrap/Row';
 import Sidebar from "./sidebar";
 import "../styles/main.scss";
 
-import TagManager from 'react-gtm-module';
-const tagManagerArgs = {
-  gtmId: 'GTM-KBDHFS2'
-};
-
-TagManager.initialize(tagManagerArgs);
-
 const Layout = ({ children }) => (
   <StaticQuery
     query={graphql`
