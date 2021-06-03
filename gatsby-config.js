@@ -72,7 +72,7 @@ module.exports = {
       }
     },
     {
-      resolve: "gatsby-plugin-google-gtag",
+      resolve: "gatsby-plugin-gtag-outbound",
       options: {
         trackingIds: ["GTM-KBDHFS2"]
       }
