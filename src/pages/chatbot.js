@@ -21,7 +21,7 @@ const ChatBot = () => {
   return isAuthenticated ? (
     <Layout>
       <SEO title="re:Bot | Your Account Assistant" />
-        <div class="embed-responsive embed-responsive-16by9" style={{height: '100%'}}>
+        <div className="embed-responsive embed-responsive-16by9" style={{height: '100%'}}>
           <iframe className="embed-responsive-item" title="ChatBot" src="https://revivehealth.secure.force.com/DiligentBot__BotMessageExternal" allowFullScreen></iframe>
         </div>
     </Layout>

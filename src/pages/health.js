@@ -8,6 +8,7 @@ import Layout from "../components/layout";
 import SEO from "../components/seo";
 
 import { useAuth0 } from "@auth0/auth0-react";
+import { OutboundLink } from "gatsby-plugin-google-gtag"
 
 const Health = () => {
   const {
@@ -121,13 +122,13 @@ const Health = () => {
               Virtual visits give you the flexibility to see a doctor when you
               need it most.
             </Card.Text>
-            <a
+            <OutboundLink
               href={cadenceRedirectUrl}
               onClick={cadenceUrlClick}
               className="btn btn-outline-info float-right d-sm-block-only float-sm-none-only"
             >
               Schedule a Virtual Visit
-            </a>
+            </OutboundLink>
           </Col>
         </Row>
 
@@ -140,7 +141,7 @@ const Health = () => {
               alt="Doctor"
             />
             <Card.Text className="mb-3">
-              Have a question about your medication? <br/><span class="text-link">Contact our pharmacist at <strong>1-863-875-5700</strong></span>
+              Have a question about your medication? <br/><span className="text-link">Contact our pharmacist at <strong>1-863-875-5700</strong></span>
             </Card.Text>
             
           </Col>
@@ -159,12 +160,12 @@ const Health = () => {
             <Card.Text className="big mb-3">
               Access our library to learn more about various health conditions.
             </Card.Text>
-            <a
+            <OutboundLink
               href="https://www.wellrxpremier.com/Revive/health-conditions"
               className="btn btn-light"
             >
               Browse Library
-            </a>
+            </OutboundLink>
           </Col>
           <Col md={4} className="my-auto floaty-img-right">
             <Card.Img src="/images/graphic-reading.svg" alt="Reading" />
@@ -181,12 +182,12 @@ const Health = () => {
               Order an at home kit, or go in to have your blood sample taken.
               Your choice!
             </Card.Text>
-            <a
+            <OutboundLink
               href="https://www.pixel.labcorp.com/"
               className="btn btn-outline-info float-right d-sm-block-only float-sm-none-only"
             >
               Get your Blood work
-            </a>
+            </OutboundLink>
           </Col>
         </Row>
       </Container>
