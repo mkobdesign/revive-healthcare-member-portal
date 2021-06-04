@@ -9,7 +9,6 @@ import Loader from "../components/loder";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import { useAuth0 } from "@auth0/auth0-react";
-import { OutboundLink } from "gatsby-plugin-google-gtag"
 
 const IndexPage = () => {
   const date = new Date();
@@ -124,7 +123,7 @@ const IndexPage = () => {
         </Row>
         <Row>
           <Col xs={6} lg={5}>
-            <OutboundLink className="snapmd-sso-trigger" href={cadenceRedirectUrl} onClick={cadenceUrlClick}>
+            <a className="snapmd-sso-trigger" href={cadenceRedirectUrl} onClick={cadenceUrlClick}>
               <Card className="shadow-sm border-0 mb-5 taller-mobile-2">
                 <Card.Img
                   src="/images/virtual-visit.png"
@@ -134,7 +133,7 @@ const IndexPage = () => {
                   <h4 className="bolded">Schedule a Virtual Visit</h4>
                 </Card.ImgOverlay>
               </Card>
-            </OutboundLink>
+            </a>
           </Col>
           <Col className="d-md-block d-lg-none" xs={6}>
             <Link to="/wellness#counseling">
@@ -177,7 +176,7 @@ const IndexPage = () => {
             </div>
             <Row>
               <Col xs={6}>
-                <OutboundLink href="https://www.wellrxpremier.com/Revive/health-conditions">
+                <a href="https://www.wellrxpremier.com/Revive/health-conditions">
                   <Card className="shadow-sm border-0 mb-5 taller-2 taller-mobile-2">
                     <Card.Img
                       src="/images/concern.png"
@@ -191,10 +190,10 @@ const IndexPage = () => {
                       <p align="right">Learn More &gt;</p>
                     </Card.ImgOverlay>
                   </Card>
-                </OutboundLink>
+                </a>
               </Col>
               <Col xs={6}>
-                <OutboundLink href="https://revive-prod.us.auth0.com/samlp/xv17kE6M9zpyMXOf0RZOUcLA9yUDMJ2w">
+                <a href="https://revive-prod.us.auth0.com/samlp/xv17kE6M9zpyMXOf0RZOUcLA9yUDMJ2w">
                   <Card className="shadow-sm border-0 mb-5 taller-2 taller-mobile-2">
                     <Card.Img
                       src="/images/benefit-hub.png"
@@ -207,7 +206,7 @@ const IndexPage = () => {
                       </h4>
                     </Card.ImgOverlay>
                   </Card>
-                </OutboundLink>
+                </a>
               </Col>
             </Row>
           </Col>
