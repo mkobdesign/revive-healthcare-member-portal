@@ -75,10 +75,7 @@ module.exports = {
       resolve: "gatsby-plugin-google-gtag",
       options: {
         // trackingIds: ["G-CDQCSMECHR"]
-        trackingIds: ["GTM-KBDHFS2, G-CDQCSMECHR"],
-        gtagConfig: {
-          anonymize_ip: true
-        },
+        trackingIds: ["G-CDQCSMECHR"],
         pluginConfig: {
           head: true
         }

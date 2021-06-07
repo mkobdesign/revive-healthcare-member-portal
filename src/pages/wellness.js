@@ -36,12 +36,12 @@ const Wellness = () => {
                 <Card.Text className="mb-4">
                   Access to your wellness benefits in one easy click.
                 </Card.Text>
-                <a
+                <OutboundLink
                   href="https://revive-prod.us.auth0.com/samlp/2OmcDoKssQDWU4wtFKStahLQ07nmB2dc"
                   className="btn btn-primary btn-lg"
                 >
                   Take your Assessment
-                </a>
+                </OutboundLink>
               </Card.ImgOverlay>
             </Card>
           </Col>
@@ -61,12 +61,12 @@ const Wellness = () => {
             <Card.Text className="mb-4">
               Access to your wellness benefits in one easy click.
             </Card.Text>
-            <a
+            <OutboundLink
               href="https://revive-prod.us.auth0.com/samlp/2OmcDoKssQDWU4wtFKStahLQ07nmB2dc"
               className="btn btn-primary btn-lg"
             >
               Take your Assessment
-            </a>
+            </OutboundLink>
           </Col>
         </Row>
 
@@ -101,12 +101,12 @@ const Wellness = () => {
               Our self-help tools support you from the comfort of your home, or
               office, or anywhere else
             </Card.Text>
-            <a
+            <OutboundLink
               href="https://revive-prod.us.auth0.com/samlp/2OmcDoKssQDWU4wtFKStahLQ07nmB2dc"
               className="btn btn-light"
             >
               Help Yourself
-            </a>
+            </OutboundLink>
           </Col>
           <Col md={4} className="my-auto">
             <Card.Img src="/images/reading2.svg" alt="Reading" />
@@ -134,12 +134,12 @@ const Wellness = () => {
                   Take our Wellness Assessment to better understand where you
                   are at in your health journey.{" "}
                 </p>
-                <a
+                <OutboundLink
                   href="https://revive-prod.us.auth0.com/samlp/2OmcDoKssQDWU4wtFKStahLQ07nmB2dc"
                   className="text-link text-right"
                 >
                   Take the Wellness Assessment &gt;
-                </a>
+                </OutboundLink>
               </Col>
             </Row>
             <Row className="mb-5">
@@ -153,12 +153,12 @@ const Wellness = () => {
                   work help evaluate your overall health and will help your
                   health coach craft a plan just for you.
                 </p>
-                <a
+                <OutboundLink
                   href="https://revive-prod.us.auth0.com/samlp/Y5AntzZADkjcYzPSW19wOduys1bktCEP"
                   className="text-link text-right"
                 >
                   Get your Biometrics &gt;
-                </a>
+                </OutboundLink>
               </Col>
             </Row>
             <Row className="mb-5">
@@ -172,12 +172,12 @@ const Wellness = () => {
                   Assessment and biometric results. A health coach is the
                   perfect addition to take your journey to the next level.
                 </p>
-                <a
+                <OutboundLink
                   href="https://revive-prod.us.auth0.com/samlp/Y5AntzZADkjcYzPSW19wOduys1bktCEP"
                   className="text-link text-right"
                 >
                   Schedule a Session with a Health Coach &gt;
-                </a>
+                </OutboundLink>
               </Col>
             </Row>
           </Col>
@@ -193,12 +193,12 @@ const Wellness = () => {
             <p className="text-white mb-5">
               <i>The ReviveMarketplace powered by BenefitHub</i>
             </p>
-            <a
+            <OutboundLink
               href="https://revive-prod.us.auth0.com/samlp/xv17kE6M9zpyMXOf0RZOUcLA9yUDMJ2w"
               className="btn btn-secondary btn-lg mb-3"
             >
               Start Saving Today
-            </a>
+            </OutboundLink>
           </Col>
           <Col md={4}>
             <Card.Img
