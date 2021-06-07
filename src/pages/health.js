@@ -6,6 +6,7 @@ import Card from "react-bootstrap/Card";
 import Loader from "../components/loder";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
+import { OutboundLink } from "gatsby-plugin-google-gtag";
 
 import { useAuth0 } from "@auth0/auth0-react";
 
