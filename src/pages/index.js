@@ -39,7 +39,22 @@ const IndexPage = () => {
   let [showNewUserBanner, setShowNewUserBanner] = React.useState(false);
 
   function cadenceUrlClick(e) {
+    trackExternalClick('Cadence');
     logout({ federated: true, redirectUrl: cadenceRedirectUrl });
+  }
+
+  function onWellRxClick() {
+    trackExternalClick('WellRX');
+  }
+
+  function onBenefitHubClick() {
+    trackExternalClick('BenefitHub');
+  }
+
+  function trackExternalClick(partner) {
+    if (window.gtag) {
+      window.gtag('event', 'External Link', {partner: partner});
+    }
   }
 
   useEffect(() => {
@@ -177,7 +192,7 @@ const IndexPage = () => {
             </div>
             <Row>
               <Col xs={6}>
-                <OutboundLink href="https://www.wellrxpremier.com/Revive/health-conditions">
+                <OutboundLink href="https://www.wellrxpremier.com/Revive/health-conditions" onClick={onWellRxClick}>
                   <Card className="shadow-sm border-0 mb-5 taller-2 taller-mobile-2">
                     <Card.Img
                       src="/images/concern.png"
@@ -194,7 +209,7 @@ const IndexPage = () => {
                 </OutboundLink>
               </Col>
               <Col xs={6}>
-                <OutboundLink href="https://revive-prod.us.auth0.com/samlp/xv17kE6M9zpyMXOf0RZOUcLA9yUDMJ2w">
+                <OutboundLink href="https://revive-prod.us.auth0.com/samlp/xv17kE6M9zpyMXOf0RZOUcLA9yUDMJ2w" onClick={onBenefitHubClick}>
                   <Card className="shadow-sm border-0 mb-5 taller-2 taller-mobile-2">
                     <Card.Img
                       src="/images/benefit-hub.png"
