@@ -24,7 +24,22 @@ const Health = () => {
   );
 
   function cadenceUrlClick(e) {
+    trackExternalClick('Cadence');
     logout({ federated: true, redirectUrl: cadenceRedirectUrl });
+  }
+
+  function trackExternalClick(partner) {
+    if (window.gtag) {
+      window.gtag('event', 'External Link', {partner: partner});
+    }
+  }
+
+  function onWellRxClick() {
+    trackExternalClick('WellRX');
+  }
+
+  function onLabCorpClick() {
+    trackExternalClick('LabCorp Pixel');
   }
 
   useEffect(() => {
@@ -161,6 +176,7 @@ const Health = () => {
               Access our library to learn more about various health conditions.
             </Card.Text>
             <OutboundLink
+              onClick={onWellRxClick}
               href="https://www.wellrxpremier.com/Revive/health-conditions"
               className="btn btn-light"
             >
@@ -183,6 +199,7 @@ const Health = () => {
               Your choice!
             </Card.Text>
             <OutboundLink
+              onClick={onLabCorpClick}
               href="https://www.pixel.labcorp.com/"
               className="btn btn-outline-info float-right d-sm-block-only float-sm-none-only"
             >

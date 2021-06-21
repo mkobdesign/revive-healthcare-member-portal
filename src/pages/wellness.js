@@ -12,6 +12,20 @@ import { OutboundLink } from "gatsby-plugin-google-gtag";
 const Wellness = () => {
   const { isAuthenticated, isLoading, loginWithRedirect } = useAuth0();
 
+  function onMedikeeperClick(e) {
+    trackExternalClick('Medikeeper');
+  }
+
+  function onLabCorpClick(e) {
+    trackExternalClick('LabCorp');
+  }
+
+  function trackExternalClick(partner) {
+    if (window.gtag) {
+      window.gtag('event', 'External Link', {partner: partner});
+    }
+  }
+
   useEffect(() => {
     if (isLoading) {
       return <div>Loading ...</div>;
@@ -38,6 +52,7 @@ const Wellness = () => {
                   Access to your wellness benefits in one easy click.
                 </Card.Text>
                 <OutboundLink
+                  onClick={onMedikeeperClick}
                   href="https://revive-prod.us.auth0.com/samlp/2OmcDoKssQDWU4wtFKStahLQ07nmB2dc"
                   className="btn btn-primary btn-lg"
                 >
@@ -63,6 +78,7 @@ const Wellness = () => {
               Access to your wellness benefits in one easy click.
             </Card.Text>
             <OutboundLink
+              onClick={onMedikeeperClick}
               href="https://revive-prod.us.auth0.com/samlp/2OmcDoKssQDWU4wtFKStahLQ07nmB2dc"
               className="btn btn-primary btn-lg"
             >
@@ -103,6 +119,7 @@ const Wellness = () => {
               office, or anywhere else
             </Card.Text>
             <OutboundLink
+              onClick={onMedikeeperClick}
               href="https://revive-prod.us.auth0.com/samlp/2OmcDoKssQDWU4wtFKStahLQ07nmB2dc"
               className="btn btn-light"
             >
@@ -136,6 +153,7 @@ const Wellness = () => {
                   are at in your health journey.{" "}
                 </p>
                 <OutboundLink
+                  onClick={onMedikeeperClick}
                   href="https://revive-prod.us.auth0.com/samlp/2OmcDoKssQDWU4wtFKStahLQ07nmB2dc"
                   className="text-link text-right"
                 >
@@ -155,6 +173,7 @@ const Wellness = () => {
                   health coach craft a plan just for you.
                 </p>
                 <OutboundLink
+                onClick={onLabCorpClick}
                   href="https://revive-prod.us.auth0.com/samlp/Y5AntzZADkjcYzPSW19wOduys1bktCEP"
                   className="text-link text-right"
                 >
@@ -174,6 +193,7 @@ const Wellness = () => {
                   perfect addition to take your journey to the next level.
                 </p>
                 <OutboundLink
+                  onClick={onLabCorpClick}
                   href="https://revive-prod.us.auth0.com/samlp/Y5AntzZADkjcYzPSW19wOduys1bktCEP"
                   className="text-link text-right"
                 >
