@@ -10,6 +10,7 @@ import Layout from "../components/layout";
 import SEO from "../components/seo";
 import { useAuth0 } from "@auth0/auth0-react";
 import { OutboundLink } from "gatsby-plugin-google-gtag";
+import loadFive9SocialWidget from "../components/load-five9-social-widget";
 
 const IndexPage = () => {
   const date = new Date();
@@ -57,6 +58,8 @@ const IndexPage = () => {
     }
   }
 
+     
+
   useEffect(() => {
     async function processPage() {
       if (isLoading) {
@@ -67,6 +70,46 @@ const IndexPage = () => {
         await loginWithRedirect();
         return null;
       }
+
+      var options = {
+        "rootUrl": "https://app.five9.com/consoles/",
+        "type": "chat",
+        "title": "Revive Health Chat",
+        "tenant": "Complete Call Solutions",
+        "profiles": "Revive Chat",
+        "showProfiles": false,
+        "autostart": true,
+        "theme": "flagship.css",
+        "surveyOptions": {
+            "showComment": true,
+            "requireComment": false
+        },
+        "fields": {
+            "name": {
+                "value": "",
+                "show": true,
+                "label": "Name"
+            },
+            "email": {
+                "value": "",
+                "show": true,
+                "label": "Email"
+            }
+        },
+        "playSoundOnMessage": true,
+        "allowCustomerToControlSoundPlay": true,
+        "showEmailButton": true,
+        "hideDuringAfterHours": false,
+        "useBusinessHours": true,
+        "showPrintButton": false,
+        "allowUsabilityMenu": true,
+        "enableCallback": false,
+        "callbackList": "",
+        "allowRequestLiveAgent": false
+      };
+      loadFive9SocialWidget(() => {
+          window.Five9SocialWidget.addWidget(options);
+      }); 
 
       await getIdTokenClaims().then(async (c) => {
         // get the created_at value from the id token claims. We use this to show the intro banner
@@ -90,6 +133,7 @@ const IndexPage = () => {
     }
 
     processPage();
+
   }, [
     isAuthenticated,
     loading,
