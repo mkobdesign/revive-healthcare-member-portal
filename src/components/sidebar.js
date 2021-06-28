@@ -67,17 +67,6 @@ const Sidebar = ({ siteTitle }) => {
                   My Wellness
                 </Link>
               </li>
-              <li className="nav-item">
-                <Link
-                  to="/chatbot"
-                  className="nav-link"
-                  activeClassName="active-link"
-                >
-                  <img src={message} alt="" width="24" height="24" title="Umbrella" />
-                  re:Bot
-                  <p className='link-desc'>Your Account Assistant</p>
-                </Link>
-              </li>
             </ul>
             <ul className="nav d-flex text-right mt-auto align-items-end">
               <li className="nav-item">
