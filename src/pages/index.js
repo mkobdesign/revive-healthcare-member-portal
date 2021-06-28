@@ -108,7 +108,7 @@ const IndexPage = () => {
         "allowRequestLiveAgent": false
       };
       loadFive9SocialWidget(() => {
-          // window.Five9SocialWidget.addWidget(options); This loads the new chat feature.. Uncomment when we deploy..
+          window.Five9SocialWidget.addWidget(options);
       }); 
 
       await getIdTokenClaims().then(async (c) => {
