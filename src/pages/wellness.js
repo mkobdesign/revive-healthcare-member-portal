@@ -106,7 +106,7 @@ const Wellness = () => {
               right counselor for your specific mental health needs.
             </p>
             <Col md={12} className="text-right">
-              <span className="text-link">Call 1-844-390-5052 to Schedule</span>
+              <span className="text-link">Call 1-888-335-8836 to Schedule</span>
             </Col>
           </Col>
         </Row>
